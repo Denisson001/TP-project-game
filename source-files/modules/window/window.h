@@ -6,6 +6,6 @@ private:
 	sf::RenderWindow window;
 public:
 	Window();
-	bool is_closed();
-	void display(Game &game);
+	bool isClosed();
+	void display(const Game &game);
 };

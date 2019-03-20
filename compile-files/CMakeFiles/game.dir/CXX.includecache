@@ -61,6 +61,8 @@ SFML/Graphics/Vertex.hpp
 -
 SFML/Graphics/VertexArray.hpp
 -
+SFML/Graphics/VertexBuffer.hpp
+-
 SFML/Graphics/View.hpp
 -
 
@@ -203,6 +205,8 @@ SFML/Graphics/Texture.hpp
 -
 SFML/Graphics/RenderTarget.hpp
 -
+SFML/Window/ContextSettings.hpp
+-
 
 ../lib-files/SFML/include/SFML/Graphics/RenderWindow.hpp
 SFML/Graphics/Export.hpp
@@ -320,6 +324,16 @@ SFML/Graphics/Rect.hpp
 SFML/Graphics/Drawable.hpp
 -
 vector
+-
+
+../lib-files/SFML/include/SFML/Graphics/VertexBuffer.hpp
+SFML/Graphics/Export.hpp
+-
+SFML/Graphics/PrimitiveType.hpp
+-
+SFML/Graphics/Drawable.hpp
+-
+SFML/Window/GlResource.hpp
 -
 
 ../lib-files/SFML/include/SFML/Graphics/View.hpp
@@ -517,9 +531,13 @@ SFML/System/Vector3.inl
 ../lib-files/SFML/include/SFML/Window.hpp
 SFML/System.hpp
 -
+SFML/Window/Clipboard.hpp
+-
 SFML/Window/Context.hpp
 -
 SFML/Window/ContextSettings.hpp
+-
+SFML/Window/Cursor.hpp
 -
 SFML/Window/Event.hpp
 -
@@ -542,6 +560,12 @@ SFML/Window/WindowHandle.hpp
 SFML/Window/WindowStyle.hpp
 -
 
+../lib-files/SFML/include/SFML/Window/Clipboard.hpp
+SFML/Window/Export.hpp
+-
+SFML/System/String.hpp
+-
+
 ../lib-files/SFML/include/SFML/Window/Context.hpp
 SFML/Window/Export.hpp
 -
@@ -553,6 +577,16 @@ SFML/System/NonCopyable.hpp
 -
 
 ../lib-files/SFML/include/SFML/Window/ContextSettings.hpp
+SFML/Config.hpp
+-
+
+../lib-files/SFML/include/SFML/Window/Cursor.hpp
+SFML/Window/Export.hpp
+-
+SFML/System/NonCopyable.hpp
+-
+SFML/System/Vector2.hpp
+-
 
 ../lib-files/SFML/include/SFML/Window/Event.hpp
 SFML/Config.hpp
@@ -613,9 +647,13 @@ vector
 -
 
 ../lib-files/SFML/include/SFML/Window/Window.hpp
+SFML/Window/ContextSettings.hpp
+-
+SFML/Window/Cursor.hpp
+-
 SFML/Window/Export.hpp
 -
-SFML/Window/ContextSettings.hpp
+SFML/Window/GlResource.hpp
 -
 SFML/Window/VideoMode.hpp
 -
@@ -623,15 +661,13 @@ SFML/Window/WindowHandle.hpp
 -
 SFML/Window/WindowStyle.hpp
 -
-SFML/Window/GlResource.hpp
--
 SFML/System/Clock.hpp
--
-SFML/System/Vector2.hpp
 -
 SFML/System/NonCopyable.hpp
 -
 SFML/System/String.hpp
+-
+SFML/System/Vector2.hpp
 -
 
 ../lib-files/SFML/include/SFML/Window/WindowHandle.hpp
@@ -645,24 +681,14 @@ modules/game/game.cpp
 /home/denisson/github/game/TP-project-game/source-files/modules/game/game.cpp
 modules/window/window.cpp
 /home/denisson/github/game/TP-project-game/source-files/modules/window/window.cpp
-modules/enemy_units_factories/enemy_units_factories.cpp
-/home/denisson/github/game/TP-project-game/source-files/modules/enemy_units_factories/enemy_units_factories.cpp
+modules/units_factories/units_factories.cpp
+/home/denisson/github/game/TP-project-game/source-files/modules/units_factories/units_factories.cpp
 iostream
 -
 string
 -
-
-/home/denisson/github/game/TP-project-game/source-files/modules/enemy_units_factories/enemy_units_factories.cpp
-enemy_units_factories.h
-/home/denisson/github/game/TP-project-game/source-files/modules/enemy_units_factories/enemy_units_factories.h
-
-/home/denisson/github/game/TP-project-game/source-files/modules/enemy_units_factories/enemy_units_factories.h
-SFML/Graphics.hpp
+memory
 -
-../units/units.cpp
-/home/denisson/github/game/TP-project-game/source-files/modules/units/units.cpp
-../../settings/units_settings.h
-/home/denisson/github/game/TP-project-game/source-files/settings/units_settings.h
 
 /home/denisson/github/game/TP-project-game/source-files/modules/game/game.cpp
 game.h
@@ -671,11 +697,13 @@ game.h
 /home/denisson/github/game/TP-project-game/source-files/modules/game/game.h
 ../units/units.cpp
 /home/denisson/github/game/TP-project-game/source-files/modules/units/units.cpp
-../enemy_units_factories/enemy_units_factories.cpp
-/home/denisson/github/game/TP-project-game/source-files/modules/enemy_units_factories/enemy_units_factories.cpp
+../units_factories/units_factories.cpp
+/home/denisson/github/game/TP-project-game/source-files/modules/units_factories/units_factories.cpp
 ../geometry/geometry.cpp
 /home/denisson/github/game/TP-project-game/source-files/modules/geometry/geometry.cpp
 vector
+-
+memory
 -
 
 /home/denisson/github/game/TP-project-game/source-files/modules/geometry/geometry.cpp
@@ -693,6 +721,24 @@ SFML/Graphics.hpp
 -
 ../geometry/geometry.cpp
 /home/denisson/github/game/TP-project-game/source-files/modules/geometry/geometry.cpp
+../../settings/units_settings.h
+/home/denisson/github/game/TP-project-game/source-files/settings/units_settings.h
+memory
+-
+
+/home/denisson/github/game/TP-project-game/source-files/modules/units_factories/units_factories.cpp
+units_factories.h
+/home/denisson/github/game/TP-project-game/source-files/modules/units_factories/units_factories.h
+
+/home/denisson/github/game/TP-project-game/source-files/modules/units_factories/units_factories.h
+SFML/Graphics.hpp
+-
+../units/units.cpp
+/home/denisson/github/game/TP-project-game/source-files/modules/units/units.cpp
+../../settings/units_settings.h
+/home/denisson/github/game/TP-project-game/source-files/settings/units_settings.h
+memory
+-
 
 /home/denisson/github/game/TP-project-game/source-files/modules/window/window.cpp
 window.h

@@ -16,4 +16,9 @@ then
     exit
 fi
 
-export LD_LIBRARY_PATH=$(pwd)/lib-files/SFML/lib && ./compile-files/game $1 $2
+./compile-files/game $1 $2
+
+
+
+#export LD_LIBRARY_PATH=$(pwd)/lib-files/SFML/lib && ./compile-files/game $1 $2
+#export LD_LIBRARY_PATH=$(pwd)/lib-files/SFML/lib && valgrind --leak-check=full ./compile-files/game $1 $2

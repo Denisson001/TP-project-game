@@ -1,16 +1,19 @@
 #include "../units/units.cpp"
-#include "../enemy_units_factories/enemy_units_factories.cpp"
+#include "../units_factories/units_factories.cpp"
 #include "../geometry/geometry.cpp"
 #include <vector>
+#include <memory>
+
+class Window;
 
 class Game{
-public:
-
-	EnemyUnitsFactory* enemyUnitsFactory;
-	std::vector<Unit*> enemyUnits;
-	//Hero hero;
+	friend Window;
+private:
+	UnitsFactory& enemy_units_factory;
+	std::vector<std::shared_ptr<Unit>> enemy_units;
+	std::shared_ptr<HeroUnit> hero;
 	void spawnEnemyUnit();
-
-	Game(EnemyUnitsFactory* enemyUnitsFactory);
+public:
+	Game(UnitsFactory& enemy_units_factory, UnitsFactory& hero_unit_factory);
 	void update(double time);
 };

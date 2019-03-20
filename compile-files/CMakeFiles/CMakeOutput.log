@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/denisson/github/game/TP-
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_72942/fast"
-/usr/bin/make -f CMakeFiles/cmTC_72942.dir/build.make CMakeFiles/cmTC_72942.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_6d9a2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6d9a2.dir/build.make CMakeFiles/cmTC_6d9a2.dir/build
 make[1]: вход в каталог «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_72942.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_72942.dir/testCCompiler.c.o   -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_72942
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72942.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_72942.dir/testCCompiler.c.o  -o cmTC_72942 -rdynamic 
+Building C object CMakeFiles/cmTC_6d9a2.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_6d9a2.dir/testCCompiler.c.o   -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_6d9a2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d9a2.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_6d9a2.dir/testCCompiler.c.o  -o cmTC_6d9a2 -rdynamic 
 make[1]: выход из каталога «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d3142/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d3142.dir/build.make CMakeFiles/cmTC_d3142.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_cdcbb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cdcbb.dir/build.make CMakeFiles/cmTC_cdcbb.dir/build
 make[1]: вход в каталог «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_d3142.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_d3142.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_d3142
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3142.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_d3142.dir/CMakeCCompilerABI.c.o  -o cmTC_d3142 -rdynamic  
+Building C object CMakeFiles/cmTC_cdcbb.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_cdcbb.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_cdcbb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cdcbb.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_cdcbb.dir/CMakeCCompilerABI.c.o  -o cmTC_cdcbb -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -59,8 +59,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d3142' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccb4OMcK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_d3142 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_d3142.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cdcbb' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccv5wF1U.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_cdcbb /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_cdcbb.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
 make[1]: выход из каталога «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
 
 
@@ -68,14 +68,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_d3142/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_d3142.dir/build.make CMakeFiles/cmTC_d3142.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_cdcbb/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_cdcbb.dir/build.make CMakeFiles/cmTC_cdcbb.dir/build]
   ignore line: [make[1]: вход в каталог «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»]
-  ignore line: [Building C object CMakeFiles/cmTC_d3142.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_d3142.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_d3142]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3142.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_d3142.dir/CMakeCCompilerABI.c.o  -o cmTC_d3142 -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTC_cdcbb.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_cdcbb.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_cdcbb]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cdcbb.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_cdcbb.dir/CMakeCCompilerABI.c.o  -o cmTC_cdcbb -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -85,13 +85,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d3142' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccb4OMcK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_d3142 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_d3142.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cdcbb' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccv5wF1U.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_cdcbb /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_cdcbb.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccb4OMcK.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccv5wF1U.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_d3142] ==> ignore
+    arg [cmTC_cdcbb] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -121,7 +121,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_d3142.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_cdcbb.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -155,14 +155,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_86755/fast"
-/usr/bin/make -f CMakeFiles/cmTC_86755.dir/build.make CMakeFiles/cmTC_86755.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a5924/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a5924.dir/build.make CMakeFiles/cmTC_a5924.dir/build
 make[1]: вход в каталог «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_86755.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_86755.dir/feature_tests.c.o   -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/feature_tests.c
-Linking C executable cmTC_86755
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86755.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_86755.dir/feature_tests.c.o  -o cmTC_86755 -rdynamic 
+Building C object CMakeFiles/cmTC_a5924.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_a5924.dir/feature_tests.c.o   -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/feature_tests.c
+Linking C executable cmTC_a5924
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a5924.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_a5924.dir/feature_tests.c.o  -o cmTC_a5924 -rdynamic 
 make[1]: выход из каталога «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
 
 
@@ -175,14 +175,14 @@ make[1]: выход из каталога «/home/denisson/github/game/TP-projec
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_87672/fast"
-/usr/bin/make -f CMakeFiles/cmTC_87672.dir/build.make CMakeFiles/cmTC_87672.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_7da01/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7da01.dir/build.make CMakeFiles/cmTC_7da01.dir/build
 make[1]: вход в каталог «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_87672.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_87672.dir/feature_tests.c.o   -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/feature_tests.c
-Linking C executable cmTC_87672
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87672.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_87672.dir/feature_tests.c.o  -o cmTC_87672 -rdynamic 
+Building C object CMakeFiles/cmTC_7da01.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_7da01.dir/feature_tests.c.o   -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/feature_tests.c
+Linking C executable cmTC_7da01
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7da01.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_7da01.dir/feature_tests.c.o  -o cmTC_7da01 -rdynamic 
 make[1]: выход из каталога «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
 
 
@@ -195,14 +195,14 @@ make[1]: выход из каталога «/home/denisson/github/game/TP-projec
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0e854/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0e854.dir/build.make CMakeFiles/cmTC_0e854.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d7a9b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d7a9b.dir/build.make CMakeFiles/cmTC_d7a9b.dir/build
 make[1]: вход в каталог «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_0e854.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_0e854.dir/feature_tests.c.o   -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/feature_tests.c
-Linking C executable cmTC_0e854
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e854.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_0e854.dir/feature_tests.c.o  -o cmTC_0e854 -rdynamic 
+Building C object CMakeFiles/cmTC_d7a9b.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_d7a9b.dir/feature_tests.c.o   -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d7a9b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7a9b.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_d7a9b.dir/feature_tests.c.o  -o cmTC_d7a9b -rdynamic 
 make[1]: выход из каталога «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
 
 
@@ -213,28 +213,28 @@ make[1]: выход из каталога «/home/denisson/github/game/TP-projec
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_20ecb/fast"
-/usr/bin/make -f CMakeFiles/cmTC_20ecb.dir/build.make CMakeFiles/cmTC_20ecb.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_50666/fast"
+/usr/bin/make -f CMakeFiles/cmTC_50666.dir/build.make CMakeFiles/cmTC_50666.dir/build
 make[1]: вход в каталог «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_20ecb.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_20ecb.dir/testCXXCompiler.cxx.o -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_20ecb
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20ecb.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_20ecb.dir/testCXXCompiler.cxx.o  -o cmTC_20ecb -rdynamic 
+Building CXX object CMakeFiles/cmTC_50666.dir/testCXXCompiler.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_50666.dir/testCXXCompiler.cxx.o -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_50666
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50666.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_50666.dir/testCXXCompiler.cxx.o  -o cmTC_50666 -rdynamic 
 make[1]: выход из каталога «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b15d1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b15d1.dir/build.make CMakeFiles/cmTC_b15d1.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_8df30/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8df30.dir/build.make CMakeFiles/cmTC_8df30.dir/build
 make[1]: вход в каталог «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_b15d1.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_b15d1.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_b15d1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b15d1.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_b15d1.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_b15d1 -rdynamic  
+Building CXX object CMakeFiles/cmTC_8df30.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++      -o CMakeFiles/cmTC_8df30.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_8df30
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8df30.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_8df30.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_8df30 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -244,8 +244,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b15d1' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNnYQQc.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_b15d1 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_b15d1.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8df30' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoa8KXr.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_8df30 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_8df30.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
 make[1]: выход из каталога «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
 
 
@@ -253,14 +253,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_b15d1/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_b15d1.dir/build.make CMakeFiles/cmTC_b15d1.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_8df30/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_8df30.dir/build.make CMakeFiles/cmTC_8df30.dir/build]
   ignore line: [make[1]: вход в каталог «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»]
-  ignore line: [Building CXX object CMakeFiles/cmTC_b15d1.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_b15d1.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_b15d1]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b15d1.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_b15d1.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_b15d1 -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_8df30.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_8df30.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_8df30]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8df30.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_8df30.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_8df30 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -270,13 +270,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b15d1' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNnYQQc.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_b15d1 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_b15d1.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8df30' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoa8KXr.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_8df30 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_8df30.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccNnYQQc.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccoa8KXr.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -294,7 +294,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_b15d1] ==> ignore
+    arg [cmTC_8df30] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -306,7 +306,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_b15d1.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_8df30.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -338,14 +338,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ace94/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ace94.dir/build.make CMakeFiles/cmTC_ace94.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b1f60/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b1f60.dir/build.make CMakeFiles/cmTC_b1f60.dir/build
 make[1]: вход в каталог «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_ace94.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_ace94.dir/feature_tests.cxx.o -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_ace94
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ace94.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_ace94.dir/feature_tests.cxx.o  -o cmTC_ace94 -rdynamic 
+Building CXX object CMakeFiles/cmTC_b1f60.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_b1f60.dir/feature_tests.cxx.o -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_b1f60
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1f60.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_b1f60.dir/feature_tests.cxx.o  -o cmTC_b1f60 -rdynamic 
 make[1]: выход из каталога «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
 
 
@@ -411,14 +411,14 @@ make[1]: выход из каталога «/home/denisson/github/game/TP-projec
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_678af/fast"
-/usr/bin/make -f CMakeFiles/cmTC_678af.dir/build.make CMakeFiles/cmTC_678af.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_0e2d0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0e2d0.dir/build.make CMakeFiles/cmTC_0e2d0.dir/build
 make[1]: вход в каталог «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_678af.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_678af.dir/feature_tests.cxx.o -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_678af
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_678af.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_678af.dir/feature_tests.cxx.o  -o cmTC_678af -rdynamic 
+Building CXX object CMakeFiles/cmTC_0e2d0.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_0e2d0.dir/feature_tests.cxx.o -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_0e2d0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e2d0.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_0e2d0.dir/feature_tests.cxx.o  -o cmTC_0e2d0 -rdynamic 
 make[1]: выход из каталога «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
 
 
@@ -484,14 +484,14 @@ make[1]: выход из каталога «/home/denisson/github/game/TP-projec
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_36a8c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_36a8c.dir/build.make CMakeFiles/cmTC_36a8c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a398d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a398d.dir/build.make CMakeFiles/cmTC_a398d.dir/build
 make[1]: вход в каталог «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_36a8c.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_36a8c.dir/feature_tests.cxx.o -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_36a8c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36a8c.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_36a8c.dir/feature_tests.cxx.o  -o cmTC_36a8c -rdynamic 
+Building CXX object CMakeFiles/cmTC_a398d.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_a398d.dir/feature_tests.cxx.o -c /home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_a398d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a398d.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_a398d.dir/feature_tests.cxx.o  -o cmTC_a398d -rdynamic 
 make[1]: выход из каталога «/home/denisson/github/game/TP-project-game/compile-files/CMakeFiles/CMakeTmp»
 
 
