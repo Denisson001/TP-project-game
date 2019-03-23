@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11 -Wall -g   -Wl,-rpath,/home/denisson/github/game/TP-project-game/compile-files/../lib-files/SFML/lib CMakeFiles/game.dir/home/denisson/github/game/TP-project-game/source-files/main.cpp.o  -o game -rdynamic -L /home/denisson/github/game/TP-project-game/compile-files/../lib-files/SFML/lib -l sfml-graphics -l sfml-window -l sfml-system 

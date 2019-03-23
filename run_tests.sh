@@ -1,0 +1,1 @@
+./test_files/tests --log_level=test_suite
