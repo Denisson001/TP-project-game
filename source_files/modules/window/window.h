@@ -1,5 +1,5 @@
 #include <SFML/Graphics.hpp>
-#include "../../settings/window_settings.h"
+#include <settings/window_settings.h>
 
 class Window{
 private:

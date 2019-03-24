@@ -1,3 +1,3 @@
-cd test_files
+cd test_files/compile_files
 cmake CMakeLists.txt
 make 

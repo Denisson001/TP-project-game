@@ -1,6 +1,6 @@
-#include "modules/game/game.cpp"
-#include "modules/window/window.cpp"
-#include "modules/units_factories/units_factories.cpp"
+#include <modules/game/game.cpp>
+#include <modules/window/window.cpp>
+#include <modules/units_factories/units_factories.cpp>
 
 #include <iostream>
 #include <string>

@@ -1,6 +1,6 @@
 #include <SFML/Graphics.hpp>
-#include "../units/units.cpp"
-#include "../../settings/units_settings.h"
+#include <modules/units/units.cpp>
+#include <settings/units_settings.h>
 #include <memory>
 
 class UnitsFactory{

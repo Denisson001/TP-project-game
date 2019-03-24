@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
-#include "../geometry/geometry.cpp"
-#include "../../settings/units_settings.h"
-#include "../../settings/window_settings.h"
+#include <modules/geometry/geometry.cpp>
+#include <settings/units_settings.h>
+#include <settings/window_settings.h>
 #include <memory>
 #include <algorithm>
 
