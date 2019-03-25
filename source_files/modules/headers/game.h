@@ -1,16 +1,16 @@
-#include <modules/units/units.cpp>
-#include <modules/units_factories/units_factories.cpp>
-#include <modules/geometry/geometry.cpp>
+#pragma once
+
 #include <vector>
 #include <memory>
 
-class Window;
+#include <classes.h>
+#include <units_factories.h>
 
 class Game{
 	friend Window;
 private:
 	UnitsFactory& enemy_units_factory;
-	std::vector<std::shared_ptr<Unit>> enemy_units;
+	std::vector<std::shared_ptr<EnemyUnit>> enemy_units;
 	std::shared_ptr<HeroUnit> hero;
 	void spawnEnemyUnit();
 public:

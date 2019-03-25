@@ -1,10 +1,10 @@
-#include <modules/game/game.cpp>
-#include <modules/window/window.cpp>
-#include <modules/units_factories/units_factories.cpp>
-
 #include <iostream>
 #include <string>
 #include <memory>
+
+#include <game.h>
+#include <window.h>
+#include <units_factories.h>
 
 UnitsFactory& getFactory(const std::string& s){
 	if (s == "Circle")

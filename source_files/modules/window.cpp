@@ -1,5 +1,4 @@
-#pragma once
-#include "window.h"
+#include <window.h>
 
 Window::Window(): window(sf::VideoMode(WINDOW_HEIGHT, WINDOW_WIDTH), WINDOW_NAME, sf::Style::Close){}
 

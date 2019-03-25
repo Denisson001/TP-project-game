@@ -1,5 +1,9 @@
+#pragma once
+
 #include <SFML/Graphics.hpp>
-#include <settings/window_settings.h>
+
+#include <game.h>
+#include <window_settings.h>
 
 class Window{
 private:

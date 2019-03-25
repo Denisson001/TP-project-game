@@ -1,18 +1,23 @@
 cmake_minimum_required(VERSION 2.8) 
-
 set(PROJECT_NAME "tests")
-set(SOURCE_FILES_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../tests)
-set(LIB_FILES_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../lib_files)
 project(${PROJECT_NAME})
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall")
-set(SOURCES_LIST "${SOURCE_FILES_PATH}/tests.cpp")
+set(TESTS_FILES_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../tests)
+set(SOURCE_FILES_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../source_files)
+set(LIB_FILES_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../lib_files)
 
-message(${SOURCES_LIST})
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall")
 
 link_directories(${LIB_FILES_PATH}/SFML/lib)
 
-add_executable(${PROJECT_NAME} ${SOURCES_LIST})
+add_executable(${PROJECT_NAME}  ${TESTS_FILES_PATH}/tests.cpp
+ 								${SOURCE_FILES_PATH}/modules/game.cpp
+								${SOURCE_FILES_PATH}/modules/geometry.cpp
+								${SOURCE_FILES_PATH}/modules/enemy_units.cpp
+								${SOURCE_FILES_PATH}/modules/hero_unit.cpp
+								${SOURCE_FILES_PATH}/modules/window.cpp
+								${SOURCE_FILES_PATH}/modules/units_factories.cpp
+								${SOURCE_FILES_PATH}/modules/controller.cpp)
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 if(NOT Boost_FOUND)
@@ -29,4 +34,5 @@ target_link_libraries(${PROJECT_NAME} sfml-system)
 
 target_include_directories(${PROJECT_NAME} PUBLIC "${LIB_FILES_PATH}/SFML/include")
 
-target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/../../source_files")
+target_include_directories(${PROJECT_NAME} PUBLIC "${SOURCE_FILES_PATH}/modules/headers")
+target_include_directories(${PROJECT_NAME} PUBLIC "${SOURCE_FILES_PATH}/settings")

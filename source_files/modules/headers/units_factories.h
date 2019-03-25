@@ -1,13 +1,20 @@
+#pragma once
+
 #include <SFML/Graphics.hpp>
-#include <modules/units/units.cpp>
-#include <settings/units_settings.h>
+
 #include <memory>
+
+#include <classes.h>
+#include <enemy_units.h>
+#include <hero_unit.h>
+#include <units_settings.h>
+
 
 class UnitsFactory{
 /* SINGLTON PATTERN */
 protected:
 	UnitsFactory(){}
-	~UnitsFactory(){}
+	virtual ~UnitsFactory(){}
 public:
 	UnitsFactory(const UnitsFactory&) = delete;
 	UnitsFactory& operator= (const UnitsFactory&) = delete;
@@ -16,7 +23,7 @@ public:
 	virtual std::shared_ptr<WeakEnemyUnit> createWeakEnemyUnit(Vector position) = 0;
 	virtual std::shared_ptr<StrongEnemyUnit> createStrongEnemyUnit(Vector position) = 0;
 	virtual std::shared_ptr<MightyEnemyUnit> createMightyEnemyUnit(Vector position) = 0;
-	virtual std::shared_ptr<HeroUnit> createHeroUnit(Vector position) = 0;
+	virtual std::shared_ptr<HeroUnit> createHeroUnit(Vector position, std::shared_ptr<Controller> controller) = 0;
 };
 
 class CircleUnitsFactory : public UnitsFactory{
@@ -33,7 +40,7 @@ public:
 	std::shared_ptr<WeakEnemyUnit> createWeakEnemyUnit(Vector position);
 	std::shared_ptr<StrongEnemyUnit> createStrongEnemyUnit(Vector position);
 	std::shared_ptr<MightyEnemyUnit> createMightyEnemyUnit(Vector position);
-	std::shared_ptr<HeroUnit> createHeroUnit(Vector position);
+	std::shared_ptr<HeroUnit> createHeroUnit(Vector position, std::shared_ptr<Controller> controller);
 };
 
 class SquareUnitsFactory : public UnitsFactory{
@@ -50,6 +57,6 @@ public:
 	std::shared_ptr<WeakEnemyUnit> createWeakEnemyUnit(Vector position);
 	std::shared_ptr<StrongEnemyUnit> createStrongEnemyUnit(Vector position);
 	std::shared_ptr<MightyEnemyUnit> createMightyEnemyUnit(Vector position);
-	std::shared_ptr<HeroUnit> createHeroUnit(Vector position);
+	std::shared_ptr<HeroUnit> createHeroUnit(Vector position, std::shared_ptr<Controller> controller);
 };
 

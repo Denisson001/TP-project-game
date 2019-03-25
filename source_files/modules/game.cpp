@@ -1,8 +1,7 @@
-#pragma once
-#include "game.h"
+#include <game.h>
 
 Game::Game(UnitsFactory& enemy_units_factory, UnitsFactory& hero_unit_factory): enemy_units_factory(enemy_units_factory){
-	hero = hero_unit_factory.createHeroUnit(Vector(500, 500));
+	hero = hero_unit_factory.createHeroUnit(Vector(700, 700), std::make_shared<KeyboardController>());
 	spawnEnemyUnit();
 }
 

@@ -1,5 +1,4 @@
-#pragma once
-#include "units_factories.h"
+#include <units_factories.h>
 
 /* =============================================================== CIRCLE =============================================================== */
 
@@ -31,10 +30,11 @@ std::shared_ptr<MightyEnemyUnit> CircleUnitsFactory::createMightyEnemyUnit(Vecto
 	return unit;
 }
 
-std::shared_ptr<HeroUnit> CircleUnitsFactory::createHeroUnit(Vector position){
+std::shared_ptr<HeroUnit> CircleUnitsFactory::createHeroUnit(Vector position, std::shared_ptr<Controller> controller){
 	std::shared_ptr<HeroUnit> unit = std::make_shared<HeroUnit>();
 	unit->shape = createUnitShape(CIRCLE_HERO_SHAPE_SIZE, HERO_SHAPE_COLOR);
 	unit->position = position;
+	unit->controller = controller;
 	return unit;
 }
 
@@ -73,10 +73,11 @@ std::shared_ptr<MightyEnemyUnit> SquareUnitsFactory::createMightyEnemyUnit(Vecto
 	return unit;
 }
 
-std::shared_ptr<HeroUnit> SquareUnitsFactory::createHeroUnit(Vector position){
+std::shared_ptr<HeroUnit> SquareUnitsFactory::createHeroUnit(Vector position, std::shared_ptr<Controller> controller){
 	std::shared_ptr<HeroUnit> unit = std::make_shared<HeroUnit>();
 	unit->shape = createUnitShape(SQUARE_STRONG_ENEMY_SHAPE_SIZE, HERO_SHAPE_COLOR);
 	unit->position = position;
+	unit->controller = controller;
 	return unit;
 }
 
