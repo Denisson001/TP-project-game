@@ -5,8 +5,7 @@
 #include <memory>
 
 #include <classes.h>
-#include <enemy_units.h>
-#include <hero_unit.h>
+#include <units.h>
 #include <units_settings.h>
 
 
@@ -19,6 +18,7 @@ public:
 	UnitsFactory(const UnitsFactory&) = delete;
 	UnitsFactory& operator= (const UnitsFactory&) = delete;
 /*==================*/
+
 public:
 	virtual std::shared_ptr<WeakEnemyUnit> createWeakEnemyUnit(Vector position) = 0;
 	virtual std::shared_ptr<StrongEnemyUnit> createStrongEnemyUnit(Vector position) = 0;
@@ -27,6 +27,10 @@ public:
 };
 
 class CircleUnitsFactory : public UnitsFactory{
+#ifdef TESTING_MODE
+	friend TestingModule;
+#endif
+
 /* SINGLTON PATTERN */
 private:
 	CircleUnitsFactory(){}
@@ -34,8 +38,10 @@ private:
 public:
 	static CircleUnitsFactory& getInstance();
 /*==================*/
+
 private:
 	std::shared_ptr<sf::Shape> createUnitShape(double unit_shape_size, sf::Color unit_shape_color);
+
 public:
 	std::shared_ptr<WeakEnemyUnit> createWeakEnemyUnit(Vector position);
 	std::shared_ptr<StrongEnemyUnit> createStrongEnemyUnit(Vector position);
@@ -44,6 +50,10 @@ public:
 };
 
 class SquareUnitsFactory : public UnitsFactory{
+#ifdef TESTING_MODE
+	friend TestingModule;
+#endif
+
 /* SINGLTON PATTERN */
 private:
 	SquareUnitsFactory(){}
@@ -51,8 +61,10 @@ private:
 public:
 	static SquareUnitsFactory& getInstance();
 /*==================*/
+
 private:
 	std::shared_ptr<sf::Shape> createUnitShape(double unit_shape_size, sf::Color unit_shape_color);
+	
 public:
 	std::shared_ptr<WeakEnemyUnit> createWeakEnemyUnit(Vector position);
 	std::shared_ptr<StrongEnemyUnit> createStrongEnemyUnit(Vector position);

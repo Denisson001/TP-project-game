@@ -3,9 +3,9 @@
 /* =============================================================== CIRCLE =============================================================== */
 
 std::shared_ptr<sf::Shape> CircleUnitsFactory::createUnitShape(double unit_shape_size, sf::Color unit_shape_color){
-	std::shared_ptr<sf::Shape> shape = std::make_shared<sf::CircleShape>(unit_shape_size);
+	std::shared_ptr<sf::Shape> shape = std::make_shared<sf::CircleShape>(unit_shape_size / 2);
 	shape->setFillColor(unit_shape_color);
-	shape->setOrigin(unit_shape_size, unit_shape_size);
+	shape->setOrigin(unit_shape_size / 2, unit_shape_size / 2);
 	return shape;
 }
 

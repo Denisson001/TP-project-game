@@ -1,4 +1,3 @@
-#include <iostream>
 #include <string>
 #include <memory>
 
@@ -21,15 +20,12 @@ int main(int argc, char* argv[]){
 	Window window;
 	sf::Clock clock;
 
-	while (!window.isClosed()){
-		double time_delta = clock.getElapsedTime().asMicroseconds() / (double)800;
+	while (1){
+		if (window.isClosed()) break;
+
+		double time_delta = clock.getElapsedTime().asMilliseconds();
 		clock.restart();
 
-		while(time_delta >= 3){
-			game.update(3);
-			time_delta -= 3;
-		}
-		
 		game.update(time_delta);
 		window.display(game);
 	}

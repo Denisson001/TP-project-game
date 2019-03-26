@@ -1,11 +1,11 @@
-#include <hero_unit.h>
+#include <units.h>
 
 void HeroUnit::checkBorder(){
 	auto shape_bounds = shape->getLocalBounds();
 	position.x = std::max(position.x, (double)shape_bounds.width / 2);
 	position.y = std::max(position.y, (double)shape_bounds.height / 2);
-	position.x = std::min(position.x, WINDOW_HEIGHT - (double)shape_bounds.height / 2);
-	position.y = std::min(position.y, WINDOW_WIDTH - (double)shape_bounds.width / 2);
+	position.x = std::min(position.x, WINDOW_WIDTH - (double)shape_bounds.width / 2);
+	position.y = std::min(position.y, WINDOW_HEIGHT - (double)shape_bounds.height / 2);
 }
 
 void HeroUnit::updateMovementModule(double time){

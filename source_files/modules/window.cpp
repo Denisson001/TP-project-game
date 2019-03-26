@@ -1,6 +1,6 @@
 #include <window.h>
 
-Window::Window(): window(sf::VideoMode(WINDOW_HEIGHT, WINDOW_WIDTH), WINDOW_NAME, sf::Style::Close){}
+Window::Window(): window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_NAME, sf::Style::Close){}
 
 bool Window::isClosed(){
 	sf::Event event;
@@ -21,8 +21,8 @@ void Window::display(const Game &game){
 		window.draw(*unit->shape);
 	}
 
-	game.hero->shape->setPosition(game.hero->position.x, game.hero->position.y);
-	window.draw(*game.hero->shape);
+	game.hero_unit->shape->setPosition(game.hero_unit->position.x, game.hero_unit->position.y);
+	window.draw(*game.hero_unit->shape);
 
 	window.display();
 }

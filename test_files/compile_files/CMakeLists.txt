@@ -2,22 +2,34 @@ cmake_minimum_required(VERSION 2.8)
 set(PROJECT_NAME "tests")
 project(${PROJECT_NAME})
 
-set(TESTS_FILES_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../tests)
+set(TESTS_FILES_PATH ${CMAKE_CURRENT_SOURCE_DIR}/..)
 set(SOURCE_FILES_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../source_files)
 set(LIB_FILES_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../lib_files)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall")
 
+add_definitions(-DTESTING_MODE)
+
 link_directories(${LIB_FILES_PATH}/SFML/lib)
 
-add_executable(${PROJECT_NAME}  ${TESTS_FILES_PATH}/tests.cpp
- 								${SOURCE_FILES_PATH}/modules/game.cpp
-								${SOURCE_FILES_PATH}/modules/geometry.cpp
-								${SOURCE_FILES_PATH}/modules/enemy_units.cpp
-								${SOURCE_FILES_PATH}/modules/hero_unit.cpp
-								${SOURCE_FILES_PATH}/modules/window.cpp
-								${SOURCE_FILES_PATH}/modules/units_factories.cpp
-								${SOURCE_FILES_PATH}/modules/controller.cpp)
+add_executable(${PROJECT_NAME}  ${TESTS_FILES_PATH}/tests/main.cpp
+
+				${TESTS_FILES_PATH}/tests/geometric_module_tests.cpp
+				${TESTS_FILES_PATH}/tests/units_factories_module_tests.cpp
+				${TESTS_FILES_PATH}/tests/hero_unit_module_tests.cpp
+				${TESTS_FILES_PATH}/tests/game_module_tests.cpp
+
+				${TESTS_FILES_PATH}/modules/testing_module.cpp
+				${TESTS_FILES_PATH}/modules/fake_controller.cpp
+
+ 				${SOURCE_FILES_PATH}/modules/game.cpp
+				${SOURCE_FILES_PATH}/modules/geometry.cpp
+				${SOURCE_FILES_PATH}/modules/enemy_units.cpp
+				${SOURCE_FILES_PATH}/modules/hero_unit.cpp
+				${SOURCE_FILES_PATH}/modules/window.cpp
+				${SOURCE_FILES_PATH}/modules/units_factories.cpp
+				${SOURCE_FILES_PATH}/modules/controller.cpp)
+
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 if(NOT Boost_FOUND)
@@ -36,3 +48,5 @@ target_include_directories(${PROJECT_NAME} PUBLIC "${LIB_FILES_PATH}/SFML/includ
 
 target_include_directories(${PROJECT_NAME} PUBLIC "${SOURCE_FILES_PATH}/modules/headers")
 target_include_directories(${PROJECT_NAME} PUBLIC "${SOURCE_FILES_PATH}/settings")
+
+target_include_directories(${PROJECT_NAME} PUBLIC "${TESTS_FILES_PATH}/modules/headers")

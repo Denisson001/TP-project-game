@@ -8,6 +8,7 @@
 class Window{
 private:
 	sf::RenderWindow window;
+	
 public:
 	Window();
 	bool isClosed();

@@ -10,13 +10,13 @@ link_directories(${LIB_FILES_PATH}/SFML/lib)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall")
 
 add_executable(${PROJECT_NAME}  ${SOURCE_FILES_PATH}/main.cpp
-								${SOURCE_FILES_PATH}/modules/game.cpp
-								${SOURCE_FILES_PATH}/modules/geometry.cpp
-								${SOURCE_FILES_PATH}/modules/enemy_units.cpp
-								${SOURCE_FILES_PATH}/modules/hero_unit.cpp
-								${SOURCE_FILES_PATH}/modules/window.cpp
-								${SOURCE_FILES_PATH}/modules/units_factories.cpp
-								${SOURCE_FILES_PATH}/modules/controller.cpp)
+				${SOURCE_FILES_PATH}/modules/game.cpp
+				${SOURCE_FILES_PATH}/modules/geometry.cpp
+				${SOURCE_FILES_PATH}/modules/enemy_units.cpp
+				${SOURCE_FILES_PATH}/modules/hero_unit.cpp
+				${SOURCE_FILES_PATH}/modules/window.cpp
+				${SOURCE_FILES_PATH}/modules/units_factories.cpp
+				${SOURCE_FILES_PATH}/modules/controller.cpp)
 
 target_link_libraries(${PROJECT_NAME} sfml-graphics)
 target_link_libraries(${PROJECT_NAME} sfml-window)
