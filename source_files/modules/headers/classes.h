@@ -14,6 +14,9 @@ class CircleUnitsFactory;
 class SquareUnitsFactory;
 class Controller;
 class KeyboardController;
-
+class Bullet;
+class GameProxy;
+class EnemySuperAttackDecorator;
+class EnemyMovementDecorator;
 
 class TestingModule;

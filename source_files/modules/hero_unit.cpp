@@ -1,5 +1,9 @@
 #include <units.h>
 
+#include <game_proxy.h>
+
+#include <math_settings.h>
+
 void HeroUnit::checkBorder(){
 	auto shape_bounds = shape->getLocalBounds();
 	position.x = std::max(position.x, (double)shape_bounds.width / 2);
@@ -15,14 +19,37 @@ void HeroUnit::updateMovementModule(double time){
 	if (controller->isLeftKeyPressed()) dx -= 1;
 	if (controller->isRightKeyPressed()) dx += 1;
 
-	double value = time * HERO_MOVE_SPEED;
-	if (dx != 0 && dy != 0) value /= sqrt(2);
+	if (dx != 0 || dy != 0){
+		position += Vector(dx, dy).resize(HERO_MOVE_SPEED * time);
+		if (!GameProxy::checkHeroUnitPosition())
+			position -= Vector(dx, dy).resize(HERO_MOVE_SPEED * time);
+	}
 
-	position.x += dx * value;
-	position.y += dy * value;
 	checkBorder();
 }
 
-void HeroUnit::update(double time){
-	updateMovementModule(time);
+void HeroUnit::updateAttackModule(double time){
+	for (int i = 0; i < (int)bullets.size(); i++){
+		bullets[i]->update(time);
+		if (bullets[i]->range <= 0){
+			swap(bullets[i], bullets.back());
+			bullets.pop_back();
+		}
+	}
+
+	current_attack_cooldown = std::max((double)0, current_attack_cooldown - time);
+
+	if (current_attack_cooldown < EPS){
+		int dx = 0, dy = 0;
+		if (controller->isUpArrowKeyPressed()) dy -= 1;
+		if (controller->isDownArrowKeyPressed()) dy += 1;
+		if (controller->isLeftArrowKeyPressed()) dx -= 1;
+		if (controller->isRightArrowKeyPressed()) dx += 1;
+
+		if (dx != 0 || dy != 0){
+			std::shared_ptr<Bullet> bullet = std::make_shared<Bullet>(shape->getFillColor(), position, Vector(dx, dy).resize(BULLET_SPEED), damage, attack_range);
+			bullets.push_back(bullet);
+			current_attack_cooldown = max_attack_cooldown;
+		}
+	}
 }

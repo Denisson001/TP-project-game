@@ -11,4 +11,8 @@ public:
 	bool isDownKeyPressed();
 	bool isLeftKeyPressed();
 	bool isRightKeyPressed();
+	bool isUpArrowKeyPressed();
+	bool isDownArrowKeyPressed();
+	bool isLeftArrowKeyPressed();
+	bool isRightArrowKeyPressed();
 };

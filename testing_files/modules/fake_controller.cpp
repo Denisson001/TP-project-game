@@ -16,4 +16,9 @@ bool FakeController::isLeftKeyPressed(){
 
 bool FakeController::isRightKeyPressed(){
 	return right;
-} 
+}
+
+bool FakeController::isUpArrowKeyPressed(){}
+bool FakeController::isDownArrowKeyPressed(){}
+bool FakeController::isLeftArrowKeyPressed(){}
+bool FakeController::isRightArrowKeyPressed(){}

@@ -15,3 +15,20 @@ bool KeyboardController::isLeftKeyPressed(){
 bool KeyboardController::isRightKeyPressed(){
 	return sf::Keyboard::isKeyPressed(sf::Keyboard::D);
 }
+
+
+bool KeyboardController::isUpArrowKeyPressed(){
+	return sf::Keyboard::isKeyPressed(sf::Keyboard::Up);
+}
+
+bool KeyboardController::isDownArrowKeyPressed(){
+	return sf::Keyboard::isKeyPressed(sf::Keyboard::Down);
+}
+
+bool KeyboardController::isLeftArrowKeyPressed(){
+	return sf::Keyboard::isKeyPressed(sf::Keyboard::Left);
+}
+
+bool KeyboardController::isRightArrowKeyPressed(){
+	return sf::Keyboard::isKeyPressed(sf::Keyboard::Right);
+}

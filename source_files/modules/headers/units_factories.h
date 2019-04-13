@@ -8,7 +8,6 @@
 #include <units.h>
 #include <units_settings.h>
 
-
 class UnitsFactory{
 /* SINGLTON PATTERN */
 protected:
@@ -18,6 +17,10 @@ public:
 	UnitsFactory(const UnitsFactory&) = delete;
 	UnitsFactory& operator= (const UnitsFactory&) = delete;
 /*==================*/
+
+protected:
+	void setUnitSettings(std::shared_ptr<Unit> unit, Vector position, double attack_cooldown, double attack_range, int damage, int health);
+	void setEnemyUnitGridPosition(std::shared_ptr<EnemyUnit> enemy_unit);
 
 public:
 	virtual std::shared_ptr<WeakEnemyUnit> createWeakEnemyUnit(Vector position) = 0;
@@ -64,11 +67,10 @@ public:
 
 private:
 	std::shared_ptr<sf::Shape> createUnitShape(double unit_shape_size, sf::Color unit_shape_color);
-	
+
 public:
 	std::shared_ptr<WeakEnemyUnit> createWeakEnemyUnit(Vector position);
 	std::shared_ptr<StrongEnemyUnit> createStrongEnemyUnit(Vector position);
 	std::shared_ptr<MightyEnemyUnit> createMightyEnemyUnit(Vector position);
 	std::shared_ptr<HeroUnit> createHeroUnit(Vector position, std::shared_ptr<Controller> controller);
 };
-
