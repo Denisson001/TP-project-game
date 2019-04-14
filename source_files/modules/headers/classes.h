@@ -19,4 +19,6 @@ class GameProxy;
 class EnemySuperAttackDecorator;
 class EnemyMovementDecorator;
 
+class LoggingModule;
+
 class TestingModule;

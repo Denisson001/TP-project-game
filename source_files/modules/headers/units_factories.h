@@ -13,6 +13,7 @@ class UnitsFactory{
 protected:
 	UnitsFactory(){}
 	virtual ~UnitsFactory(){}
+
 public:
 	UnitsFactory(const UnitsFactory&) = delete;
 	UnitsFactory& operator= (const UnitsFactory&) = delete;
@@ -38,6 +39,7 @@ class CircleUnitsFactory : public UnitsFactory{
 private:
 	CircleUnitsFactory(){}
 	~CircleUnitsFactory(){}
+
 public:
 	static CircleUnitsFactory& getInstance();
 /*==================*/

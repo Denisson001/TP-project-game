@@ -70,5 +70,4 @@ protected:
 
 public:
 	std::shared_ptr<Controller> controller;
-	std::vector<std::shared_ptr<Bullet> > bullets;
 };

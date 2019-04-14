@@ -27,7 +27,7 @@ void EnemySuperAttackDecorator::updateAttackModule(double time){
         Vector vector = hero_unit_position - position;
         for (int i = 0; i < 10; i++){
             std::shared_ptr<Bullet> bullet = std::make_shared<Bullet>(shape->getFillColor(), position, vector.resize(BULLET_SPEED).rotate(2 * PI * i / 10), damage, attack_range);
-            GameProxy::addEnemyBullet(bullet);
+            GameProxy::addEnemyUnitBullet(bullet);
         }
         current_attack_cooldown = 2 * max_attack_cooldown;
     }

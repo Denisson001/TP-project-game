@@ -17,6 +17,7 @@ class EnemySuperAttackDecorator : public EnemyUnitDecorator{
 protected:
 	void updateAttackModule(double time);
 	void updateMovementModule(double time);
+
 public:
     EnemySuperAttackDecorator(std::shared_ptr<EnemyUnit> new_decorator_ptr);
 	void update(double time);
@@ -26,9 +27,11 @@ class EnemyMovementDecorator : public EnemyUnitDecorator{
 private:
     std::pair<int, int> new_grid_position;
     Vector convertGridCellToVector(std::pair<int, int> cell_index);
+    
 protected:
     void updateAttackModule(double time);
     void updateMovementModule(double time);
+
 public:
     EnemyMovementDecorator(std::shared_ptr<EnemyUnit> new_decorator_ptr);
     void update(double time);

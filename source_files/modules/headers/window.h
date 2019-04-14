@@ -10,8 +10,6 @@
 class Window{
 private:
 	sf::RenderWindow window;
-	std::string convertNumberToString(int value);
-	void drawText(std::string str, Vector position);
 
 public:
 	Window();

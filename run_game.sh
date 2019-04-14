@@ -1,4 +1,4 @@
-if [ ! -n "$1" -o ! -n "$2" ]
+if [ ! -n "$1" -o ! -n "$2" -o ! -n "$3"  ]
 then
 	echo "invalid number of arguments"
     exit
@@ -16,6 +16,5 @@ then
     exit
 fi
 
-
-./compile_files/game $1 $2
-#valgrind --leak-check=full ./compile_files/game $1 $2
+./compile_files/game $1 $2 $3
+#valgrind --leak-check=full ./compile_files/game $1 $2 $3

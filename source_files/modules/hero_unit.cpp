@@ -29,14 +29,6 @@ void HeroUnit::updateMovementModule(double time){
 }
 
 void HeroUnit::updateAttackModule(double time){
-	for (int i = 0; i < (int)bullets.size(); i++){
-		bullets[i]->update(time);
-		if (bullets[i]->range <= 0){
-			swap(bullets[i], bullets.back());
-			bullets.pop_back();
-		}
-	}
-
 	current_attack_cooldown = std::max((double)0, current_attack_cooldown - time);
 
 	if (current_attack_cooldown < EPS){
@@ -47,8 +39,7 @@ void HeroUnit::updateAttackModule(double time){
 		if (controller->isRightArrowKeyPressed()) dx += 1;
 
 		if (dx != 0 || dy != 0){
-			std::shared_ptr<Bullet> bullet = std::make_shared<Bullet>(shape->getFillColor(), position, Vector(dx, dy).resize(BULLET_SPEED), damage, attack_range);
-			bullets.push_back(bullet);
+			GameProxy::addHeroUnitBullet(std::make_shared<Bullet>(shape->getFillColor(), position, Vector(dx, dy).resize(BULLET_SPEED), damage, attack_range));
 			current_attack_cooldown = max_attack_cooldown;
 		}
 	}

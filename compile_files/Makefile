@@ -420,6 +420,33 @@ home/denisson/github/game/TP-project-game/source_files/modules/hero_unit.cpp.s:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/home/denisson/github/game/TP-project-game/source_files/modules/hero_unit.cpp.s
 .PHONY : home/denisson/github/game/TP-project-game/source_files/modules/hero_unit.cpp.s
 
+home/denisson/github/game/TP-project-game/source_files/modules/logging_module.o: home/denisson/github/game/TP-project-game/source_files/modules/logging_module.cpp.o
+
+.PHONY : home/denisson/github/game/TP-project-game/source_files/modules/logging_module.o
+
+# target to build an object file
+home/denisson/github/game/TP-project-game/source_files/modules/logging_module.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/home/denisson/github/game/TP-project-game/source_files/modules/logging_module.cpp.o
+.PHONY : home/denisson/github/game/TP-project-game/source_files/modules/logging_module.cpp.o
+
+home/denisson/github/game/TP-project-game/source_files/modules/logging_module.i: home/denisson/github/game/TP-project-game/source_files/modules/logging_module.cpp.i
+
+.PHONY : home/denisson/github/game/TP-project-game/source_files/modules/logging_module.i
+
+# target to preprocess a source file
+home/denisson/github/game/TP-project-game/source_files/modules/logging_module.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/home/denisson/github/game/TP-project-game/source_files/modules/logging_module.cpp.i
+.PHONY : home/denisson/github/game/TP-project-game/source_files/modules/logging_module.cpp.i
+
+home/denisson/github/game/TP-project-game/source_files/modules/logging_module.s: home/denisson/github/game/TP-project-game/source_files/modules/logging_module.cpp.s
+
+.PHONY : home/denisson/github/game/TP-project-game/source_files/modules/logging_module.s
+
+# target to generate assembly for a file
+home/denisson/github/game/TP-project-game/source_files/modules/logging_module.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/home/denisson/github/game/TP-project-game/source_files/modules/logging_module.cpp.s
+.PHONY : home/denisson/github/game/TP-project-game/source_files/modules/logging_module.cpp.s
+
 home/denisson/github/game/TP-project-game/source_files/modules/units.o: home/denisson/github/game/TP-project-game/source_files/modules/units.cpp.o
 
 .PHONY : home/denisson/github/game/TP-project-game/source_files/modules/units.o
@@ -543,6 +570,9 @@ help:
 	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/hero_unit.o"
 	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/hero_unit.i"
 	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/hero_unit.s"
+	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/logging_module.o"
+	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/logging_module.i"
+	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/logging_module.s"
 	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/units.o"
 	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/units.i"
 	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/units.s"

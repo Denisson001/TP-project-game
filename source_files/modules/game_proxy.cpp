@@ -11,8 +11,12 @@ Vector GameProxy::getHeroUnitPosition(){
     return game->hero_unit->position;
 }
 
-void GameProxy::addEnemyBullet(std::shared_ptr<Bullet> bullet){
-    game->enemy_bullets.push_back(bullet);
+void GameProxy::addEnemyUnitBullet(std::shared_ptr<Bullet> bullet){
+    game->enemy_units_bullets.push_back(bullet);
+}
+
+void GameProxy::addHeroUnitBullet(std::shared_ptr<Bullet> bullet){
+    game->hero_unit_bullets.push_back(bullet);
 }
 
 bool GameProxy::getGridCellValue(std::pair<int, int> cell_index){
@@ -37,4 +41,8 @@ bool GameProxy::checkEnemyUnitPosition(sf::FloatRect enemy_unit_bounds){
     if (hero_unit_bounds.intersects(enemy_unit_bounds))
         return 0;
     return 1;
+}
+
+double GameProxy::getTime(){
+    return game->timer;
 }

@@ -19,14 +19,19 @@ class Game{
 private:
 	UnitsFactory& enemy_units_factory;
 	std::vector<std::shared_ptr<EnemyUnit>> enemy_units;
-	std::vector<std::shared_ptr<Bullet>> enemy_bullets;
 	std::shared_ptr<HeroUnit> hero_unit;
-	void checkHeroUnitBullets();
+	std::vector<std::shared_ptr<Bullet>> enemy_units_bullets, hero_unit_bullets;
+	void checkHeroUnitBullets(double time);
 	void checkEnemyUnitsBullets(double time);
+	std::pair<int, int> getRandomFreeGridCell();
+	void spawnEnemyUnits();
 	bool grid[HORIZONTAL_DOTS_AMOUNT][VERTICAL_DOTS_AMOUNT];
+	double timer, enemy_units_spawn_timer;
+	template<class T>
+	void eraseFromVector(std::vector<T>& vector, int& index);
 
 public:
-	Game(UnitsFactory& enemy_units_factory, UnitsFactory& hero_unit_factory);
+	Game(UnitsFactory& enemy_units_factory);
 	void update(double time);
-	void initialize();
+	void initialize(UnitsFactory& hero_unit_factory);
 };

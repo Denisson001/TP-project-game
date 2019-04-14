@@ -1,66 +1,69 @@
 #include <game.h>
 #include <enemy_units_decorators.h>
-
 #include <game_proxy.h>
+#include <logging_module.h>
 
-Game::Game(UnitsFactory& enemy_units_factory, UnitsFactory& hero_unit_factory): enemy_units_factory(enemy_units_factory){
+#include <units_settings.h>
+#include <technical_settings.h>
+
+Game::Game(UnitsFactory& enemy_units_factory): enemy_units_factory(enemy_units_factory){
 	for (int i = 1; i < HORIZONTAL_DOTS_AMOUNT; i++){
 		for (int j = 1; j < VERTICAL_DOTS_AMOUNT; j++){
 			grid[i][j] = 0;
 		}
 	}
+	timer = 0;
+	enemy_units_spawn_timer = 0;
+}
+
+void Game::initialize(UnitsFactory& hero_unit_factory){
 	hero_unit = hero_unit_factory.createHeroUnit(Vector(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2), std::make_shared<KeyboardController>());
+	if (MAKE_LOGS)
+		LoggingModule::created(hero_unit);
 }
 
-#include <iostream>
-
-void Game::initialize(){
-	//only for example
-	enemy_units.push_back(std::make_shared<EnemyMovementDecorator>(
-		(std::make_shared<EnemySuperAttackDecorator>(enemy_units_factory.createWeakEnemyUnit(Vector(HORIZONTAL_GAP_SIZE, VERITCAL_GAP_SIZE))))));
-	enemy_units.push_back(std::make_shared<EnemyMovementDecorator>(
-		(std::make_shared<EnemySuperAttackDecorator>(enemy_units_factory.createWeakEnemyUnit(Vector(HORIZONTAL_GAP_SIZE * 2, VERITCAL_GAP_SIZE))))));
-	enemy_units.push_back(std::make_shared<EnemyMovementDecorator>(
-		(std::make_shared<EnemySuperAttackDecorator>(enemy_units_factory.createWeakEnemyUnit(Vector(HORIZONTAL_GAP_SIZE * 3, VERITCAL_GAP_SIZE))))));
-	enemy_units.push_back(std::make_shared<EnemyMovementDecorator>(
-		(std::make_shared<EnemySuperAttackDecorator>(enemy_units_factory.createStrongEnemyUnit(Vector(HORIZONTAL_GAP_SIZE * 3, VERITCAL_GAP_SIZE * 3))))));
-	enemy_units.push_back(enemy_units_factory.createStrongEnemyUnit(Vector(HORIZONTAL_GAP_SIZE * 3, VERITCAL_GAP_SIZE * 4)));
-	enemy_units.push_back(std::make_shared<EnemyMovementDecorator>(enemy_units_factory.createMightyEnemyUnit(Vector(HORIZONTAL_GAP_SIZE * 7 , VERITCAL_GAP_SIZE * 7))));
-	enemy_units.push_back(std::make_shared<EnemyMovementDecorator>(enemy_units_factory.createMightyEnemyUnit(Vector(HORIZONTAL_GAP_SIZE * 7 , VERITCAL_GAP_SIZE * 1))));
-	enemy_units.push_back(std::make_shared<EnemyMovementDecorator>(enemy_units_factory.createMightyEnemyUnit(Vector(HORIZONTAL_GAP_SIZE * 7 , VERITCAL_GAP_SIZE * 2))));
-	enemy_units.push_back(std::make_shared<EnemyMovementDecorator>(enemy_units_factory.createMightyEnemyUnit(Vector(HORIZONTAL_GAP_SIZE * 7 , VERITCAL_GAP_SIZE * 3))));
-	enemy_units.push_back(std::make_shared<EnemyMovementDecorator>(enemy_units_factory.createMightyEnemyUnit(Vector(HORIZONTAL_GAP_SIZE * 7 , VERITCAL_GAP_SIZE * 4))));
-	enemy_units.push_back(std::make_shared<EnemyMovementDecorator>(enemy_units_factory.createMightyEnemyUnit(Vector(HORIZONTAL_GAP_SIZE * 7 , VERITCAL_GAP_SIZE * 5))));
-	enemy_units.push_back(enemy_units_factory.createMightyEnemyUnit(Vector(HORIZONTAL_GAP_SIZE * 4 , VERITCAL_GAP_SIZE * 3)));
-	enemy_units.push_back(enemy_units_factory.createMightyEnemyUnit(Vector(HORIZONTAL_GAP_SIZE * 4 , VERITCAL_GAP_SIZE * 6)));
-	enemy_units.push_back(enemy_units_factory.createMightyEnemyUnit(Vector(HORIZONTAL_GAP_SIZE * 4 , VERITCAL_GAP_SIZE * 5)));
-	enemy_units.push_back(enemy_units_factory.createMightyEnemyUnit(Vector(HORIZONTAL_GAP_SIZE * 4 , VERITCAL_GAP_SIZE * 7)));
-	enemy_units.push_back(enemy_units_factory.createMightyEnemyUnit(Vector(HORIZONTAL_GAP_SIZE * 4 , VERITCAL_GAP_SIZE * 2)));
-	//СТОЯЧИЕ ЗАНИМАЮТ КЛЕТКУ
-	// + ПРИ УДАЛЕНИИ
+template<class T>
+void Game::eraseFromVector(std::vector<T>& vector, int& index){
+	std::swap(vector[index], vector.back());
+	vector.pop_back();
+	index--;
 }
 
-void Game::checkHeroUnitBullets(){
-	for (int i = 0; i < (int)hero_unit->bullets.size(); i++){
-		sf::FloatRect bullet_bounds = hero_unit->bullets[i]->getBounds();
+void Game::checkHeroUnitBullets(double time){
+	for (int i = 0; i < (int)hero_unit_bullets.size(); i++){
+		hero_unit_bullets[i]->update(time);
+
+		sf::FloatRect bullet_bounds = hero_unit_bullets[i]->getBounds();
 		bool deleted = 0;
 
 		for (int j = 0; j < (int)enemy_units.size(); j++){
 			sf::FloatRect enemy_unit_bounds = enemy_units[j]->getBounds();
+
 			if (enemy_unit_bounds.intersects(bullet_bounds)){
-				enemy_units[j]->health -= hero_unit->bullets[i]->damage;
+				enemy_units[j]->health -= hero_unit_bullets[i]->damage;
+
 				if (enemy_units[j]->health <= 0){
-					std::swap(enemy_units[j], enemy_units.back());
-					enemy_units.pop_back();
+					if (MAKE_LOGS)
+						LoggingModule::killed(enemy_units[j]);
+
+					eraseFromVector(enemy_units, j);
+
+					enemy_units_spawn_timer = std::min(enemy_units_spawn_timer,
+						(int)enemy_units.size() < MIN_ENEMY_UNITS_AMOUNT ?
+						ENEMY_UNITS_SMALL_SPAWN_GAP - TIMER_REDUCTION_AFTER_ENEMY_DEATH : ENEMY_UNITS_BIG_SPAWN_GAP - TIMER_REDUCTION_AFTER_ENEMY_DEATH);
 				}
+
 				deleted = 1;
 				break;
 			}
 		}
 
+		if (hero_unit_bullets[i]->range <= 0){
+			deleted = 0;
+		}
+
 		if (deleted){
-			std::swap(hero_unit->bullets[i], hero_unit->bullets.back());
-			hero_unit->bullets.pop_back();
+			eraseFromVector(hero_unit_bullets, i);
 		}
 	}
 }
@@ -68,33 +71,99 @@ void Game::checkHeroUnitBullets(){
 void Game::checkEnemyUnitsBullets(double time){
 	sf::FloatRect hero_unit_bounds = hero_unit->getBounds();
 
-	for (int i = 0; i < (int)enemy_bullets.size(); i++){
-		enemy_bullets[i]->update(time);
-		sf::FloatRect enemy_bullet_bounds = enemy_bullets[i]->getBounds();
+	for (int i = 0; i < (int)enemy_units_bullets.size(); i++){
+		enemy_units_bullets[i]->update(time);
+		sf::FloatRect enemy_bullet_bounds = enemy_units_bullets[i]->getBounds();
 		bool deleted = 0;
 
 		if (hero_unit_bounds.intersects(enemy_bullet_bounds)){
-			hero_unit->health -= enemy_bullets[i]->damage;
+			hero_unit->health -= enemy_units_bullets[i]->damage;
 			deleted = 1;
 		}
 
-		if (enemy_bullets[i]->range <= 0){
+		if (enemy_units_bullets[i]->range <= 0){
 			deleted = 1;
 		}
 
 		if (deleted){
-			swap(enemy_bullets[i], enemy_bullets.back());
-			enemy_bullets.pop_back();
+			eraseFromVector(enemy_units_bullets, i);
 		}
 	}
 }
 
+std::pair<int, int> Game::getRandomFreeGridCell(){
+	std::vector<std::pair<int, int> > positions;
+	sf::FloatRect enemy_unit_bounds;
+	enemy_unit_bounds.height = enemy_unit_bounds.width = ENEMY_SHAPE_MAX_SIZE;
+
+	for (int i = 1; i < HORIZONTAL_DOTS_AMOUNT; i++){
+		for (int j = 1; j < VERTICAL_DOTS_AMOUNT; j++){
+			if (grid[i][j] == 0){
+				Vector position = Vector(i * HORIZONTAL_GAP_SIZE, j * VERITCAL_GAP_SIZE);
+				enemy_unit_bounds.left = position.x - enemy_unit_bounds.width;
+				enemy_unit_bounds.top = position.y - enemy_unit_bounds.height;
+				if (GameProxy::checkEnemyUnitPosition(enemy_unit_bounds))
+					positions.push_back((std::make_pair(i, j)));
+			}
+		}
+	}
+
+	if (positions.size() == 0)
+		return std::make_pair(-1, -1);
+	return positions[rand() % positions.size()];
+}
+
+void Game::spawnEnemyUnits(){
+	if ((int)enemy_units.size() < MIN_ENEMY_UNITS_AMOUNT && enemy_units_spawn_timer >= ENEMY_UNITS_SMALL_SPAWN_GAP ||
+		(int)enemy_units.size() < MAX_ENEMY_UNITS_AMOUNT && enemy_units_spawn_timer >= ENEMY_UNITS_BIG_SPAWN_GAP){
+
+		std::pair<int, int> grid_position = getRandomFreeGridCell();
+		if (grid_position != std::make_pair(-1, -1)){
+			Vector position = Vector(grid_position.first * HORIZONTAL_GAP_SIZE, grid_position.second * VERITCAL_GAP_SIZE);
+			int enemy_type = rand() % 100;
+			std::shared_ptr<EnemyUnit> enemy_unit;
+
+			if (enemy_type < WEAK_ENEMY_SPAWN_CHANSE)
+				enemy_unit = enemy_units_factory.createWeakEnemyUnit(position);
+
+			else if (enemy_type < WEAK_ENEMY_SPAWN_CHANSE + STRONG_ENEMY_SPAWN_CHANSE)
+				enemy_unit = enemy_units_factory.createStrongEnemyUnit(position);
+
+			else
+				enemy_unit = enemy_units_factory.createMightyEnemyUnit(position);
+
+			if (MAKE_LOGS)
+				LoggingModule::created(enemy_unit);
+
+			if (rand() % 100 < ENEMY_WITH_SUPER_ATTACK_SPAWN_CHANSE){
+				enemy_unit = std::make_shared<EnemySuperAttackDecorator>(enemy_unit);
+				if (MAKE_LOGS)
+					LoggingModule::created(enemy_unit);
+			}
+
+			if (rand() % 100 < ENEMY_WITH_MOVEMENT_SPAWN_CHANSE){
+				enemy_unit = std::make_shared<EnemyMovementDecorator>(enemy_unit);
+				if (MAKE_LOGS)
+					LoggingModule::created(enemy_unit);
+			}
+
+			enemy_units.push_back(enemy_unit);
+		}
+		enemy_units_spawn_timer = 0;
+	}
+}
+
 void Game::update(double time){
+	timer += time;
+	enemy_units_spawn_timer += time;
+
 	hero_unit->update(time);
 
 	for (auto& enemy_unit : enemy_units)
 		enemy_unit->update(time);
 
-	checkHeroUnitBullets();
+	checkHeroUnitBullets(time);
 	checkEnemyUnitsBullets(time);
+
+	spawnEnemyUnits();
 }

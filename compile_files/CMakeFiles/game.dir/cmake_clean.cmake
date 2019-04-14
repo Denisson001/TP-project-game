@@ -13,6 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/game.dir/home/denisson/github/game/TP-project-game/source_files/modules/enemy_movement_decorator.cpp.o"
   "CMakeFiles/game.dir/home/denisson/github/game/TP-project-game/source_files/modules/units.cpp.o"
   "CMakeFiles/game.dir/home/denisson/github/game/TP-project-game/source_files/modules/enemy_unit_decorator.cpp.o"
+  "CMakeFiles/game.dir/home/denisson/github/game/TP-project-game/source_files/modules/logging_module.cpp.o"
   "game.pdb"
   "game"
 )

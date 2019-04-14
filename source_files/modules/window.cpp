@@ -13,37 +13,6 @@ bool Window::isClosed(){
 	return 0;
 }
 
-std::string Window::convertNumberToString(int value){
-	if (value == 0)
-		return "0";
-	std::string text;
-	bool minus = 0;
-	if (value < 0){
-		value = -value;
-		minus = 1;
-	}
-	while(value){
-		text += '0' + value % 10;
-		value /= 10;
-	}
-	if (minus)
-		text += '-';
-	reverse(text.begin(), text.end());
-	return text;
-}
-
-void Window::drawText(std::string str, Vector position){
-	/*sf::Font font;
-	font.loadFromFile("font.ttf");
-	sf::Text text(str, font);
-	text.setCharacterSize(30);
-	text.setStyle(sf::Text::Bold);
-	text.setFillColor(sf::Color::Black);
-	text.setPosition(position.x, position.y);
-	// Draw it
-	window.draw(text);*/
-}
-
 void Window::display(std::shared_ptr<Game> game){
 	window.clear();
 
@@ -52,12 +21,12 @@ void Window::display(std::shared_ptr<Game> game){
 		window.draw(*unit->shape);
 	}
 
-	for (auto& enemy_unit_bullet : game->enemy_bullets){
+	for (auto& enemy_unit_bullet : game->enemy_units_bullets){
 		enemy_unit_bullet->shape->setPosition(enemy_unit_bullet->position.x, enemy_unit_bullet->position.y);
 		window.draw(*enemy_unit_bullet->shape);
 	}
 
-	for (auto& hero_unit_bullet : game->hero_unit->bullets){
+	for (auto& hero_unit_bullet : game->hero_unit_bullets){
 		hero_unit_bullet->shape->setPosition(hero_unit_bullet->position.x, hero_unit_bullet->position.y);
 		window.draw(*hero_unit_bullet->shape);
 	}
