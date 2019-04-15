@@ -85,11 +85,17 @@ void LoggingModule::initialize(int seed){
     file.close();
 }
 
-void LoggingModule::addUnitSettings(std::shared_ptr<Unit> unit){
-    addMessage("Damage: " + convertIntToString(unit->getDamage()));
-    addMessage("Health: " + convertIntToString(unit->getHealth()));
-    addMessage("Attack range: " + convertIntToString(unit->getAttackRange()));
-    addMessage("Attack cooldown: " + convertIntToString(unit->getMaxAttackCooldown()));
+void LoggingModule::addHeroUnitSettings(std::shared_ptr<HeroUnit> hero_unit){
+    addMessage("Damage: " + convertIntToString(hero_unit->getDamage()));
+    addMessage("Health: " + convertIntToString(hero_unit->getHealth()));
+    addMessage("Attack range: " + convertIntToString(hero_unit->getAttackRange()));
+}
+
+void LoggingModule::addEnemyUnitSettings(std::shared_ptr<EnemyUnit> enemy_unit){
+    addMessage("Damage: " + convertIntToString(enemy_unit->getDamage()));
+    addMessage("Health: " + convertIntToString(enemy_unit->getHealth()));
+    addMessage("Attack range: " + convertIntToString(enemy_unit->getAttackRange()));
+    addMessage("Attack cooldown: " + convertIntToString(enemy_unit->getMaxAttackCooldown()));
 }
 
 void LoggingModule::created(std::shared_ptr<Unit> unit){
@@ -114,25 +120,25 @@ void LoggingModule::created(std::shared_ptr<Unit> unit){
 
 void LoggingModule::created(std::shared_ptr<HeroUnit> hero_unit){
     addMessage("HeroUnit created at position: " + convertVectorToString(hero_unit->getPosition()));
-    addUnitSettings(hero_unit);
+    addHeroUnitSettings(hero_unit);
     printMessages();
 }
 
 void LoggingModule::created(std::shared_ptr<WeakEnemyUnit> enemy_unit){
     addMessage("WeakEnemyUnit created at position: " + convertVectorToString(enemy_unit->getPosition()));
-    addUnitSettings(enemy_unit);
+    addEnemyUnitSettings(enemy_unit);
     printMessages();
 }
 
 void LoggingModule::created(std::shared_ptr<StrongEnemyUnit> enemy_unit){
     addMessage("StrongEnemyUnit created at position: " + convertVectorToString(enemy_unit->getPosition()));
-    addUnitSettings(enemy_unit);
+    addEnemyUnitSettings(enemy_unit);
     printMessages();
 }
 
 void LoggingModule::created(std::shared_ptr<MightyEnemyUnit> enemy_unit){
     addMessage("MightyEnemyUnit created at position: " + convertVectorToString(enemy_unit->getPosition()));
-    addUnitSettings(enemy_unit);
+    addEnemyUnitSettings(enemy_unit);
     printMessages();
 }
 

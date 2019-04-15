@@ -31,7 +31,9 @@ private:
 	void eraseFromVector(std::vector<T>& vector, int& index);
 
 public:
+	int killed_enemy_units_amount;
 	Game(UnitsFactory& enemy_units_factory);
 	void update(double time);
 	void initialize(UnitsFactory& hero_unit_factory);
+	bool end();
 };

@@ -17,7 +17,8 @@ private:
     static std::string getTime();
     static void printMessages();
     static void addMessage(const std::string& str);
-    static void addUnitSettings(std::shared_ptr<Unit> unit);
+    static void addEnemyUnitSettings(std::shared_ptr<EnemyUnit> enemy_unit);
+    static void addHeroUnitSettings(std::shared_ptr<HeroUnit> hero_unit);
 
 public:
     LoggingModule() = delete;

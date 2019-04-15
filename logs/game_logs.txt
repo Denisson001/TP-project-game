@@ -1,244 +1,206 @@
 *** START LOGGING ***
-seed: 321
+seed: 228
 
 [00:00] HeroUnit created at position: (640, 360)
-        Damage: 3
+        Damage: 2
         Health: 100
         Attack range: 600
-        Attack cooldown: 300
 
 
-[00:01] MightyEnemyUnit created at position: (320, 180)
-        Damage: 4
+[00:01] WeakEnemyUnit created at position: (320, 270)
+        Damage: 1
+        Health: 5
+        Attack range: 480
+        Attack cooldown: 1000
+
+
+[00:02] WeakEnemyUnit created at position: (640, 540)
+        Damage: 1
+        Health: 5
+        Attack range: 480
+        Attack cooldown: 1000
+
+
+[00:03] MightyEnemyUnit created at position: (640, 180)
+        Damage: 3
         Health: 15
-        Attack range: 600
-        Attack cooldown: 1200
+        Attack range: 580
+        Attack cooldown: 1500
 
 
-[00:01] EnemyMovementDecorator has been applied
+[00:03] WeakEnemyUnit was killed at position: (320, 270)
 
 
-[00:02] StrongEnemyUnit created at position: (320, 450)
-        Damage: 3
+[00:04] StrongEnemyUnit created at position: (1120, 540)
+        Damage: 2
         Health: 10
-        Attack range: 550
-        Attack cooldown: 1050
+        Attack range: 530
+        Attack cooldown: 1250
 
 
-[00:02] EnemyMovementDecorator has been applied
-
-
-[00:03] WeakEnemyUnit created at position: (320, 270)
+[00:05] StrongEnemyUnit created at position: (640, 90)
         Damage: 2
-        Health: 5
-        Attack range: 500
-        Attack cooldown: 900
-
-
-[00:03] EnemyMovementDecorator has been applied
-
-
-[00:04] StrongEnemyUnit created at position: (640, 360)
-        Damage: 3
         Health: 10
-        Attack range: 550
-        Attack cooldown: 1050
+        Attack range: 530
+        Attack cooldown: 1250
 
 
-[00:04] EnemyMovementDecorator has been applied
-
-
-[00:04] Decorated EnemyUnit with movement was killed at position: (160, 255)
-
-
-[00:05] WeakEnemyUnit created at position: (1120, 360)
-        Damage: 2
+[00:06] WeakEnemyUnit created at position: (960, 270)
+        Damage: 1
         Health: 5
-        Attack range: 500
-        Attack cooldown: 900
+        Attack range: 480
+        Attack cooldown: 1000
 
 
-[00:05] EnemySuperAttackDecorator has been applied
+[00:07] MightyEnemyUnit was killed at position: (640, 180)
 
 
-[00:05] EnemyMovementDecorator has been applied
-
-
-[00:06] WeakEnemyUnit created at position: (160, 180)
-        Damage: 2
-        Health: 5
-        Attack range: 500
-        Attack cooldown: 900
-
-
-[00:06] EnemySuperAttackDecorator has been applied
-
-
-[00:07] Decorated EnemyUnit with movement was killed at position: (849, 270)
-
-
-[00:07] WeakEnemyUnit created at position: (480, 540)
-        Damage: 2
-        Health: 5
-        Attack range: 500
-        Attack cooldown: 900
-
-
-[00:07] EnemySuperAttackDecorator has been applied
-
-
-[00:08] Decorated EnemyUnit with movement was killed at position: (1021, 180)
-
-
-[00:08] MightyEnemyUnit created at position: (320, 360)
-        Damage: 4
+[00:07] MightyEnemyUnit created at position: (480, 270)
+        Damage: 3
         Health: 15
-        Attack range: 600
-        Attack cooldown: 1200
+        Attack range: 580
+        Attack cooldown: 1500
 
 
-[00:08] EnemyMovementDecorator has been applied
+[00:09] StrongEnemyUnit was killed at position: (640, 90)
 
 
-[00:09] Decorated EnemyUnit with super attack was killed at position: (480, 540)
-
-
-[00:09] StrongEnemyUnit created at position: (640, 630)
+[00:09] MightyEnemyUnit created at position: (960, 180)
         Damage: 3
-        Health: 10
-        Attack range: 550
-        Attack cooldown: 1050
-
-
-[00:09] EnemyMovementDecorator has been applied
-
-
-[00:12] Decorated EnemyUnit with movement was killed at position: (398, 270)
-
-
-[00:12] StrongEnemyUnit created at position: (960, 540)
-        Damage: 3
-        Health: 10
-        Attack range: 550
-        Attack cooldown: 1050
-
-
-[00:12] EnemySuperAttackDecorator has been applied
-
-
-[00:12] EnemyMovementDecorator has been applied
-
-
-[00:13] Decorated EnemyUnit with super attack was killed at position: (160, 180)
-
-
-[00:13] StrongEnemyUnit created at position: (160, 630)
-        Damage: 3
-        Health: 10
-        Attack range: 550
-        Attack cooldown: 1050
-
-
-[00:13] EnemySuperAttackDecorator has been applied
-
-
-[00:15] Decorated EnemyUnit with super attack was killed at position: (160, 630)
-
-
-[00:15] StrongEnemyUnit created at position: (1120, 450)
-        Damage: 3
-        Health: 10
-        Attack range: 550
-        Attack cooldown: 1050
-
-
-[00:15] EnemyMovementDecorator has been applied
-
-
-[00:16] Decorated EnemyUnit with movement was killed at position: (577, 540)
-
-
-[00:17] WeakEnemyUnit created at position: (320, 540)
-        Damage: 2
-        Health: 5
-        Attack range: 500
-        Attack cooldown: 900
-
-
-[00:18] Decorated EnemyUnit with movement was killed at position: (805, 540)
-
-
-[00:18] WeakEnemyUnit created at position: (320, 90)
-        Damage: 2
-        Health: 5
-        Attack range: 500
-        Attack cooldown: 900
-
-
-[00:20] Decorated EnemyUnit with movement was killed at position: (800, 201)
-
-
-[00:20] StrongEnemyUnit created at position: (160, 90)
-        Damage: 3
-        Health: 10
-        Attack range: 550
-        Attack cooldown: 1050
-
-
-[00:21] WeakEnemyUnit was killed at position: (320, 540)
-
-
-[00:22] WeakEnemyUnit created at position: (480, 630)
-        Damage: 2
-        Health: 5
-        Attack range: 500
-        Attack cooldown: 900
-
-
-[00:23] WeakEnemyUnit was killed at position: (320, 90)
-
-
-[00:23] MightyEnemyUnit created at position: (640, 540)
-        Damage: 4
         Health: 15
-        Attack range: 600
-        Attack cooldown: 1200
+        Attack range: 580
+        Attack cooldown: 1500
 
 
-[00:26] StrongEnemyUnit was killed at position: (160, 90)
+[00:09] EnemySuperAttackDecorator has been applied
 
 
-[00:26] WeakEnemyUnit created at position: (800, 270)
-        Damage: 2
+[00:12] WeakEnemyUnit created at position: (160, 540)
+        Damage: 1
         Health: 5
-        Attack range: 500
-        Attack cooldown: 900
+        Attack range: 480
+        Attack cooldown: 1000
 
 
-[00:26] EnemySuperAttackDecorator has been applied
+[00:13] MightyEnemyUnit was killed at position: (480, 270)
 
 
-[00:29] StrongEnemyUnit created at position: (800, 90)
-        Damage: 3
-        Health: 10
-        Attack range: 550
-        Attack cooldown: 1050
+[00:14] WeakEnemyUnit was killed at position: (640, 540)
 
 
-[00:33] StrongEnemyUnit created at position: (1120, 90)
-        Damage: 3
-        Health: 10
-        Attack range: 550
-        Attack cooldown: 1050
-
-
-[00:33] EnemyMovementDecorator has been applied
-
-
-[00:36] WeakEnemyUnit created at position: (960, 540)
+[00:14] StrongEnemyUnit created at position: (160, 360)
         Damage: 2
+        Health: 10
+        Attack range: 530
+        Attack cooldown: 1250
+
+
+[00:15] WeakEnemyUnit was killed at position: (160, 540)
+
+
+[00:15] WeakEnemyUnit created at position: (800, 450)
+        Damage: 1
         Health: 5
-        Attack range: 500
-        Attack cooldown: 900
+        Attack range: 480
+        Attack cooldown: 1000
+
+
+[00:16] StrongEnemyUnit was killed at position: (160, 360)
+
+
+[00:16] StrongEnemyUnit created at position: (800, 360)
+        Damage: 2
+        Health: 10
+        Attack range: 530
+        Attack cooldown: 1250
+
+
+[00:17] WeakEnemyUnit was killed at position: (800, 450)
+
+
+[00:17] StrongEnemyUnit created at position: (1120, 90)
+        Damage: 2
+        Health: 10
+        Attack range: 530
+        Attack cooldown: 1250
+
+
+[00:17] EnemyMovementDecorator has been applied
+
+
+[00:18] StrongEnemyUnit was killed at position: (800, 360)
+
+
+[00:19] StrongEnemyUnit created at position: (960, 450)
+        Damage: 2
+        Health: 10
+        Attack range: 530
+        Attack cooldown: 1250
+
+
+[00:19] EnemyMovementDecorator has been applied
+
+
+[00:20] Decorated EnemyUnit with movement was killed at position: (960, 551)
+
+
+[00:20] MightyEnemyUnit created at position: (160, 540)
+        Damage: 3
+        Health: 15
+        Attack range: 580
+        Attack cooldown: 1500
+
+
+[00:21] WeakEnemyUnit was killed at position: (960, 270)
+
+
+[00:21] MightyEnemyUnit created at position: (480, 450)
+        Damage: 3
+        Health: 15
+        Attack range: 580
+        Attack cooldown: 1500
+
+
+[00:22] Decorated EnemyUnit with super attack was killed at position: (960, 180)
+
+
+[00:22] StrongEnemyUnit created at position: (320, 90)
+        Damage: 2
+        Health: 10
+        Attack range: 530
+        Attack cooldown: 1250
+
+
+[00:25] MightyEnemyUnit was killed at position: (480, 450)
+
+
+[00:25] StrongEnemyUnit created at position: (1120, 270)
+        Damage: 2
+        Health: 10
+        Attack range: 530
+        Attack cooldown: 1250
+
+
+[00:27] MightyEnemyUnit was killed at position: (160, 540)
+
+
+[00:27] MightyEnemyUnit created at position: (320, 450)
+        Damage: 3
+        Health: 15
+        Attack range: 580
+        Attack cooldown: 1500
+
+
+[00:27] EnemySuperAttackDecorator has been applied
+
+
+[00:30] StrongEnemyUnit created at position: (960, 360)
+        Damage: 2
+        Health: 10
+        Attack range: 530
+        Attack cooldown: 1250
+
+
+[00:30] EnemySuperAttackDecorator has been applied
 
 

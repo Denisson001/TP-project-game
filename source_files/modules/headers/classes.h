@@ -20,6 +20,11 @@ class EnemySuperAttackDecorator;
 class EnemyMovementDecorator;
 class EnemyUnitsBooster;
 
+class HeroUnitAttackModule;
+class SingleShotModule;
+class SplitShotModule;
+class TripleShotModule;
+
 class LoggingModule;
 
 class TestingModule;

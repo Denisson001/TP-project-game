@@ -47,13 +47,13 @@ void MightyEnemyUnit::updateAttackModule(double time){
 }
 
 void WeakEnemyUnit::upgrade(){
-    damage += WEAK_ENEMY_ADDITIONAL_DAMAGE;
+    health = std::min(WEAK_ENEMY_MAX_HEALTH, health + WEAK_ENEMY_ADDITIONAL_HEALTH);
 }
 
 void StrongEnemyUnit::upgrade(){
-    attack_range *= STRONG_ENEMY_ADDITIONAL_ATTACK_RANGE_COEFFICIENT;
+    max_attack_cooldown = std::max(STRONG_ENEMY_MIN_ATTACK_COOLDOWN, max_attack_cooldown * STRONG_ENEMY_ATTACK_COOLDOWN_REDUCTION_COEFFICIENT);
 }
 
 void MightyEnemyUnit::upgrade(){
-    health += MIGHTY_ENEMY_ADDITIONAL_HEALTH;
+    attack_range = std::min(MIGHTY_ENEMY_MAX_ATTACK_RANGE, attack_range * MIGHTY_ENEMY_ADDITIONAL_ATTACK_RANGE_COEFFICIENT);
 }

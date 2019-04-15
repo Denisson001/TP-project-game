@@ -45,14 +45,6 @@ std::shared_ptr<sf::Shape>& Unit::getShape(){
     return shape;
 }
 
-double& Unit::getMaxAttackCooldown(){
-    return max_attack_cooldown;
-}
-
-double& Unit::getCurrentAttackCooldown(){
-    return current_attack_cooldown;
-}
-
 double& Unit::getAttackRange(){
     return attack_range;
 }
@@ -63,6 +55,14 @@ int& Unit::getDamage(){
 
 int& Unit::getHealth(){
     return health;
+}
+
+double& Unit::getMaxAttackCooldown(){
+    return max_attack_cooldown;
+}
+
+double& EnemyUnit::getCurrentAttackCooldown(){
+    return current_attack_cooldown;
 }
 
 std::pair<int, int>& EnemyUnit::getCurrentGridPosition(){

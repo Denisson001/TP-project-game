@@ -46,7 +46,7 @@ void EnemyMovementDecorator::updateMovementModule(double time){
         getCurrentGridPosition() = new_grid_position;
         new_grid_position = std::make_pair(-1, -1);
     } else {
-        Vector vector = (new_position - getPosition()).resize(ENEMY_UNIT_SPEED);
+        Vector vector = (new_position - getPosition()).resize(ENEMY_MOVESPEED);
         Vector prev_position = getPosition();
         if ((getPosition() - new_position).length() < vector.length()){
             getPosition() = new_position;

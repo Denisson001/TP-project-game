@@ -1,8 +1,10 @@
 #include <units.h>
 
+#include <hero_unit_attack_module.h>
 #include <game_proxy.h>
 
 #include <math_settings.h>
+
 
 void HeroUnit::checkBorder(){
 	auto shape_bounds = shape->getLocalBounds();
@@ -20,31 +22,25 @@ void HeroUnit::updateMovementModule(double time){
 	if (controller->isRightKeyPressed()) dx += 1;
 
 	if (dx != 0 || dy != 0){
-		position += Vector(dx, dy).resize(HERO_MOVE_SPEED * time);
+		position += Vector(dx, dy).resize(HERO_MOVESPEED * time);
 		if (!GameProxy::checkHeroUnitPosition())
-			position -= Vector(dx, dy).resize(HERO_MOVE_SPEED * time);
+			position -= Vector(dx, dy).resize(HERO_MOVESPEED * time);
 	}
 
 	checkBorder();
 }
 
 void HeroUnit::updateAttackModule(double time){
-	current_attack_cooldown = std::max((double)0, current_attack_cooldown - time);
-
-	if (current_attack_cooldown < EPS){
-		int dx = 0, dy = 0;
-		if (controller->isUpArrowKeyPressed()) dy -= 1;
-		if (controller->isDownArrowKeyPressed()) dy += 1;
-		if (controller->isLeftArrowKeyPressed()) dx -= 1;
-		if (controller->isRightArrowKeyPressed()) dx += 1;
-
-		if (dx != 0 || dy != 0){
-			GameProxy::addHeroUnitBullet(std::make_shared<Bullet>(shape->getFillColor(), position, Vector(dx, dy).resize(BULLET_SPEED), damage, attack_range));
-			current_attack_cooldown = max_attack_cooldown;
-		}
-	}
+	attack_module->update(time, this);
 }
 
+void HeroUnit::changeAttackModule(){
+	current_attack_module_index++;
+	if (current_attack_module_index == attack_modules.size())
+		current_attack_module_index = 0;
+	attack_module = attack_modules[current_attack_module_index];
+	attack_module->initialize();
+}
 
 std::shared_ptr<Controller>& HeroUnit::getController(){
 	return controller;

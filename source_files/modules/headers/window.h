@@ -11,6 +11,8 @@ class Window{
 private:
 	sf::RenderWindow window;
 
+	void displayText(std::string text, Vector position);
+
 public:
 	Window();
 	bool isClosed();

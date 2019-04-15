@@ -1,3 +1,0 @@
-/home/denisson/github/game/TP-project-game/compile_files/CMakeFiles/rebuild_cache.dir
-/home/denisson/github/game/TP-project-game/compile_files/CMakeFiles/edit_cache.dir
-/home/denisson/github/game/TP-project-game/compile_files/CMakeFiles/game.dir

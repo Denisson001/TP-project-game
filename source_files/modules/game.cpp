@@ -15,6 +15,7 @@ Game::Game(UnitsFactory& enemy_units_factory): enemy_units_factory(enemy_units_f
 	}
 	timer = 0;
 	enemy_units_spawn_timer = 0;
+	killed_enemy_units_amount = 0;
 }
 
 void Game::initialize(UnitsFactory& hero_unit_factory){
@@ -48,8 +49,11 @@ void Game::checkHeroUnitBullets(double time){
 						LoggingModule::killed(enemy_units[j]);
 
 					eraseFromVector(enemy_units, j);
-
 					EnemyUnitsBooster::update();
+					killed_enemy_units_amount++;
+
+					if (killed_enemy_units_amount % KILLED_ENEMY_UNITS == 0)
+						hero_unit->changeAttackModule();
 
 					enemy_units_spawn_timer = std::min(enemy_units_spawn_timer,
 						(int)enemy_units.size() < MIN_ENEMY_UNITS_AMOUNT ?
@@ -62,7 +66,7 @@ void Game::checkHeroUnitBullets(double time){
 		}
 
 		if (hero_unit_bullets[i]->range <= 0){
-			deleted = 0;
+			deleted = 1;
 		}
 
 		if (deleted){
@@ -103,8 +107,8 @@ std::pair<int, int> Game::getRandomFreeGridCell(){
 		for (int j = 1; j < VERTICAL_DOTS_AMOUNT; j++){
 			if (grid[i][j] == 0){
 				Vector position = Vector(i * HORIZONTAL_GAP_SIZE, j * VERITCAL_GAP_SIZE);
-				enemy_unit_bounds.left = position.x - enemy_unit_bounds.width;
-				enemy_unit_bounds.top = position.y - enemy_unit_bounds.height;
+				enemy_unit_bounds.left = position.x - enemy_unit_bounds.width / 2;
+				enemy_unit_bounds.top = position.y - enemy_unit_bounds.height / 2;
 				if (GameProxy::checkEnemyUnitPosition(enemy_unit_bounds))
 					positions.push_back((std::make_pair(i, j)));
 			}
@@ -173,4 +177,8 @@ void Game::update(double time){
 	checkEnemyUnitsBullets(time);
 
 	spawnEnemyUnits();
+}
+
+bool Game::end(){
+	return hero_unit->getHealth() <= 0;
 }

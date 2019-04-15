@@ -22,7 +22,7 @@ protected:
 	virtual void updateMovementModule(double time) = 0;
 	Vector position;
 	std::shared_ptr<sf::Shape> shape;
-	double max_attack_cooldown, current_attack_cooldown, attack_range;
+	double max_attack_cooldown, attack_range;
 	int damage, health;
 
 public:
@@ -32,7 +32,6 @@ public:
 	virtual Vector& getPosition();
 	virtual std::shared_ptr<sf::Shape>& getShape();
 	virtual double& getMaxAttackCooldown();
-	virtual double& getCurrentAttackCooldown();
 	virtual double& getAttackRange();
 	virtual int& getDamage();
 	virtual int& getHealth();
@@ -41,11 +40,13 @@ public:
 class EnemyUnit : public Unit{
 protected:
 	std::pair<int, int> current_grid_position;
+	double current_attack_cooldown;
 
 public:
 	void updateGridPosition();
 	virtual ~EnemyUnit();
 	virtual std::pair<int, int>& getCurrentGridPosition();
+	virtual double& getCurrentAttackCooldown();
 	virtual void upgrade() = 0;
 };
 
@@ -81,9 +82,14 @@ class HeroUnit : public Unit{
 	friend TestingModule;
 #endif
 
+	friend UnitsFactory;
+
 private:
 	void checkBorder();
 	std::shared_ptr<Controller> controller;
+	std::vector<std::shared_ptr<HeroUnitAttackModule>> attack_modules;
+	std::shared_ptr<HeroUnitAttackModule> attack_module;
+	int current_attack_module_index;
 
 protected:
 	void updateAttackModule(double time);
@@ -91,4 +97,5 @@ protected:
 
 public:
 	std::shared_ptr<Controller>& getController();
+	void changeAttackModule();
 };

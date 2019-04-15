@@ -14,6 +14,7 @@ position(position), vector(vector), damage(damage), range(range){
     shape->setOrigin(9, 11);
     shape->setFillColor(color);
     shape->rotate(vector.getAngleInDegrees() - 90);
+    shape->setScale(BULLET_SHAPE_SCALE_X, BULLET_SHAPE_SCALE_Y);
 }
 
 void Bullet::update(double time){

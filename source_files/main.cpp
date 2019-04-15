@@ -17,6 +17,8 @@ UnitsFactory& getFactory(const std::string& s){
 		return SquareUnitsFactory::getInstance();
 }
 
+#include <iostream>
+
 int main(int argc, char* argv[]){
 	int seed = abs(atoi(argv[3]));
 	srand(seed);
@@ -33,11 +35,14 @@ int main(int argc, char* argv[]){
 	sf::Clock clock;
 
 	while (1){
-		if (window.isClosed())
+		if (window.isClosed() || game->end())
 			break;
 		double time_delta = clock.getElapsedTime().asMilliseconds();
 		clock.restart();
 		game->update(time_delta);
 		window.display(game);
 	}
+
+	std::cout << "*** GAME OVER ***\n";
+	std::cout << "You killed " << game->killed_enemy_units_amount << " enemy units!\n";
 }

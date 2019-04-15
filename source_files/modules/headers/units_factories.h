@@ -20,7 +20,9 @@ public:
 /*==================*/
 
 protected:
-	void setUnitSettings(std::shared_ptr<Unit> unit, Vector position, double attack_cooldown, double attack_range, int damage, int health);
+	void setEnemyUnitSettings(std::shared_ptr<EnemyUnit> enemy_unit, Vector position, double attack_cooldown, double attack_range, int damage, int health);
+	void setHeroUnitSettings(std::shared_ptr<HeroUnit> hero_unit, Vector position, double attack_cooldown,
+								double attack_range, int damage, int health, std::shared_ptr<Controller> controller);
 
 public:
 	virtual std::shared_ptr<WeakEnemyUnit> createWeakEnemyUnit(Vector position) = 0;
