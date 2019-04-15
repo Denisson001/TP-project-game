@@ -9,57 +9,57 @@ Vector EnemyMovementDecorator::convertGridCellToVector(std::pair<int, int> cell_
 
 EnemyMovementDecorator::EnemyMovementDecorator(std::shared_ptr<EnemyUnit> new_decorator_ptr){
     decorator_ptr = new_decorator_ptr;
-    getValues();
     new_grid_position = std::make_pair(-1, -1);
 }
 
-void EnemyMovementDecorator::update(double time){
-    updateAttackModule(time);
-    updateMovementModule(time);
+void EnemyMovementDecorator::setNewGridPosition(){
+    std::vector<std::pair<int, int> > directions;
+    int dx[] = {0, 1, 0, -1};
+    int dy[] = {1, 0, -1, 0};
+    for (int i = 0; i < 4; i++){
+        int new_x = getCurrentGridPosition().first + dx[i];
+        int new_y = getCurrentGridPosition().second + dy[i];
+        if (new_x >= 1 && new_x < HORIZONTAL_DOTS_AMOUNT && new_y >= 1 && new_y < VERTICAL_DOTS_AMOUNT){
+            if (GameProxy::getGridCellValue(std::make_pair(new_x, new_y)))
+                continue;
+            directions.push_back(std::make_pair(new_x, new_y));
+        }
+    }
+    if (directions.size() == 0)
+        return;
+    new_grid_position = directions[rand() % directions.size()];
 }
 
 void EnemyMovementDecorator::updateMovementModule(double time){
     if (new_grid_position == std::make_pair(-1, -1)){
-        std::vector<std::pair<int, int> > directions;
-        for (int dx = -1; dx <= 1; dx++){
-            for (int dy = -1; dy <= 1; dy++) if (abs(dx) + abs(dy) == 1){
-                int new_x = current_grid_position.first + dx;
-                int new_y = current_grid_position.second + dy;
-                if (new_x >= 1 && new_x < HORIZONTAL_DOTS_AMOUNT && new_y >= 1 && new_y < VERTICAL_DOTS_AMOUNT){
-                    if (GameProxy::getGridCellValue(std::make_pair(new_x, new_y))) continue;
-                    directions.push_back(std::make_pair(new_x, new_y));
-                }
-            }
-        }
-        if (directions.size() == 0)
+        setNewGridPosition();
+        if (new_grid_position == std::make_pair(-1, -1))
             return;
-        new_grid_position = directions[rand() % directions.size()];
         GameProxy::setGridCellValue(new_grid_position, 1);
     }
 
-    Vector new_position = convertGridCellToVector(current_grid_position);
+    Vector new_position = convertGridCellToVector(new_grid_position);
 
-    if ((position - new_position).length() < EPS){
-        GameProxy::setGridCellValue(current_grid_position, 0);
-        current_grid_position = new_grid_position;
+    if ((getPosition() - new_position).length() < EPS){
+        getPosition() = new_position;
+        GameProxy::setGridCellValue(getCurrentGridPosition(), 0);
+        getCurrentGridPosition() = new_grid_position;
         new_grid_position = std::make_pair(-1, -1);
     } else {
-        Vector vector = (new_position - position).resize(ENEMY_UNIT_SPEED);
-        Vector prev_position = position;
-        if ((position - new_position).length() < vector.length()){
-            position = new_position;
+        Vector vector = (new_position - getPosition()).resize(ENEMY_UNIT_SPEED);
+        Vector prev_position = getPosition();
+        if ((getPosition() - new_position).length() < vector.length()){
+            getPosition() = new_position;
         } else {
-            position += vector;
+            getPosition() += vector;
         }
         if (!GameProxy::checkEnemyUnitPosition(getBounds()))
-            position = prev_position;
+            getPosition() = prev_position;
     }
 }
 
 void EnemyMovementDecorator::updateAttackModule(double time){
-    setValues();
     decorator_ptr->updateAttackModule(time);
-    getValues();
 }
 
 EnemyMovementDecorator::~EnemyMovementDecorator(){

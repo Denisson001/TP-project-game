@@ -312,6 +312,33 @@ home/denisson/github/game/TP-project-game/source_files/modules/enemy_units.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/home/denisson/github/game/TP-project-game/source_files/modules/enemy_units.cpp.s
 .PHONY : home/denisson/github/game/TP-project-game/source_files/modules/enemy_units.cpp.s
 
+home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.o: home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.cpp.o
+
+.PHONY : home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.o
+
+# target to build an object file
+home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.cpp.o
+.PHONY : home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.cpp.o
+
+home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.i: home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.cpp.i
+
+.PHONY : home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.i
+
+# target to preprocess a source file
+home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.cpp.i
+.PHONY : home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.cpp.i
+
+home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.s: home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.cpp.s
+
+.PHONY : home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.s
+
+# target to generate assembly for a file
+home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.cpp.s
+.PHONY : home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.cpp.s
+
 home/denisson/github/game/TP-project-game/source_files/modules/game.o: home/denisson/github/game/TP-project-game/source_files/modules/game.cpp.o
 
 .PHONY : home/denisson/github/game/TP-project-game/source_files/modules/game.o
@@ -558,6 +585,9 @@ help:
 	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/enemy_units.o"
 	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/enemy_units.i"
 	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/enemy_units.s"
+	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.o"
+	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.i"
+	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.s"
 	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/game.o"
 	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/game.i"
 	@echo "... home/denisson/github/game/TP-project-game/source_files/modules/game.s"

@@ -690,12 +690,12 @@ geometry.h
 SFML/Graphics.hpp
 -
 
-../source_files/modules/headers/enemy_units_decorators.h
-memory
--
+../source_files/modules/headers/enemy_units_booster.h
 units.h
 -
-game_settings.h
+list
+-
+memory
 -
 
 ../source_files/modules/headers/game.h
@@ -719,18 +719,6 @@ game.h
 -
 
 ../source_files/modules/headers/geometry.h
-
-../source_files/modules/headers/logging_module.h
-memory
--
-vector
--
-geometry.h
--
-enemy_units_decorators.h
--
-classes.h
--
 
 ../source_files/modules/headers/units.h
 SFML/Graphics.hpp
@@ -768,23 +756,21 @@ units_settings.h
 window_settings.h
 -
 
-../source_files/settings/technical_settings.h
+../source_files/settings/math_settings.h
 
 ../source_files/settings/units_settings.h
 
 ../source_files/settings/window_settings.h
 
-/home/denisson/github/game/TP-project-game/source_files/modules/game.cpp
-game.h
--
-enemy_units_decorators.h
+/home/denisson/github/game/TP-project-game/source_files/modules/enemy_units.cpp
+units.h
 -
 game_proxy.h
 -
-logging_module.h
+math_settings.h
 -
-units_settings.h
--
-technical_settings.h
+
+/home/denisson/github/game/TP-project-game/source_files/modules/enemy_units_booster.cpp
+enemy_units_booster.h
 -
 

@@ -8,7 +8,7 @@ void GameProxy::setGameInstance(std::shared_ptr<Game> game_instance){
 }
 
 Vector GameProxy::getHeroUnitPosition(){
-    return game->hero_unit->position;
+    return game->hero_unit->getPosition();
 }
 
 void GameProxy::addEnemyUnitBullet(std::shared_ptr<Bullet> bullet){

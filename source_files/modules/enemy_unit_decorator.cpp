@@ -1,23 +1,37 @@
 #include <enemy_units_decorators.h>
 
-void EnemyUnitDecorator::getValues(){
-    position = decorator_ptr->position;
-    shape = decorator_ptr->shape;
-    max_attack_cooldown = decorator_ptr->max_attack_cooldown;
-    current_attack_cooldown = decorator_ptr->current_attack_cooldown;
-    attack_range = decorator_ptr->attack_range;
-    damage = decorator_ptr->damage;
-    health = decorator_ptr->health;
-    current_grid_position = decorator_ptr->current_grid_position;
+Vector& EnemyUnitDecorator::getPosition(){
+    return decorator_ptr->getPosition();
 }
 
-void EnemyUnitDecorator::setValues(){
-    decorator_ptr->position = position;
-    decorator_ptr->shape = shape;
-    decorator_ptr->max_attack_cooldown = max_attack_cooldown;
-    decorator_ptr->current_attack_cooldown = current_attack_cooldown;
-    decorator_ptr->attack_range = attack_range;
-    decorator_ptr->damage = damage;
-    decorator_ptr->health = health;
-    decorator_ptr->current_grid_position = current_grid_position;
+std::shared_ptr<sf::Shape>& EnemyUnitDecorator::getShape(){
+    return decorator_ptr->getShape();
+}
+
+double& EnemyUnitDecorator::getMaxAttackCooldown(){
+    return decorator_ptr->getMaxAttackCooldown();
+}
+
+double& EnemyUnitDecorator::getCurrentAttackCooldown(){
+    return decorator_ptr->getCurrentAttackCooldown();
+}
+
+double& EnemyUnitDecorator::getAttackRange(){
+    return decorator_ptr->getAttackRange();
+}
+
+int& EnemyUnitDecorator::getDamage(){
+    return decorator_ptr->getDamage();
+}
+
+int& EnemyUnitDecorator::getHealth(){
+    return decorator_ptr->getHealth();
+}
+
+std::pair<int, int>& EnemyUnitDecorator::getCurrentGridPosition(){
+    return decorator_ptr->getCurrentGridPosition();
+}
+
+void EnemyUnitDecorator::upgrade(){
+    decorator_ptr->upgrade();
 }

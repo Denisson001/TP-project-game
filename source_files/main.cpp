@@ -33,8 +33,8 @@ int main(int argc, char* argv[]){
 	sf::Clock clock;
 
 	while (1){
-		if (window.isClosed()) break;
-
+		if (window.isClosed())
+			break;
 		double time_delta = clock.getElapsedTime().asMilliseconds();
 		clock.restart();
 		game->update(time_delta);

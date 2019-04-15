@@ -38,6 +38,10 @@ const int MIGHTY_ENEMY_HEALTH = 15;
 
 const double ENEMY_UNIT_SPEED = 0.15;
 
+const int WEAK_ENEMY_ADDITIONAL_DAMAGE = 1;
+const double STRONG_ENEMY_ADDITIONAL_ATTACK_RANGE_COEFFICIENT = 1.1;
+const int MIGHTY_ENEMY_ADDITIONAL_HEALTH = 1;
+
 const double CIRCLE_HERO_SHAPE_SIZE = 40;
 const double SQUARE_HERO_SHAPE_SIZE = 30;
 const sf::Color HERO_SHAPE_COLOR = sf::Color::White;

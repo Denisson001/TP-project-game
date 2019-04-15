@@ -18,6 +18,7 @@ class Bullet;
 class GameProxy;
 class EnemySuperAttackDecorator;
 class EnemyMovementDecorator;
+class EnemyUnitsBooster;
 
 class LoggingModule;
 

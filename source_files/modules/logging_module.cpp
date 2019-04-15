@@ -86,10 +86,10 @@ void LoggingModule::initialize(int seed){
 }
 
 void LoggingModule::addUnitSettings(std::shared_ptr<Unit> unit){
-    addMessage("Damage: " + convertIntToString(unit->damage));
-    addMessage("Health: " + convertIntToString(unit->health));
-    addMessage("Attack range: " + convertIntToString(unit->attack_range));
-    addMessage("Attack cooldown: " + convertIntToString(unit->max_attack_cooldown));
+    addMessage("Damage: " + convertIntToString(unit->getDamage()));
+    addMessage("Health: " + convertIntToString(unit->getHealth()));
+    addMessage("Attack range: " + convertIntToString(unit->getAttackRange()));
+    addMessage("Attack cooldown: " + convertIntToString(unit->getMaxAttackCooldown()));
 }
 
 void LoggingModule::created(std::shared_ptr<Unit> unit){
@@ -113,25 +113,25 @@ void LoggingModule::created(std::shared_ptr<Unit> unit){
 }
 
 void LoggingModule::created(std::shared_ptr<HeroUnit> hero_unit){
-    addMessage("HeroUnit created at position: " + convertVectorToString(hero_unit->position));
+    addMessage("HeroUnit created at position: " + convertVectorToString(hero_unit->getPosition()));
     addUnitSettings(hero_unit);
     printMessages();
 }
 
 void LoggingModule::created(std::shared_ptr<WeakEnemyUnit> enemy_unit){
-    addMessage("WeakEnemyUnit created at position: " + convertVectorToString(enemy_unit->position));
+    addMessage("WeakEnemyUnit created at position: " + convertVectorToString(enemy_unit->getPosition()));
     addUnitSettings(enemy_unit);
     printMessages();
 }
 
 void LoggingModule::created(std::shared_ptr<StrongEnemyUnit> enemy_unit){
-    addMessage("StrongEnemyUnit created at position: " + convertVectorToString(enemy_unit->position));
+    addMessage("StrongEnemyUnit created at position: " + convertVectorToString(enemy_unit->getPosition()));
     addUnitSettings(enemy_unit);
     printMessages();
 }
 
 void LoggingModule::created(std::shared_ptr<MightyEnemyUnit> enemy_unit){
-    addMessage("MightyEnemyUnit created at position: " + convertVectorToString(enemy_unit->position));
+    addMessage("MightyEnemyUnit created at position: " + convertVectorToString(enemy_unit->getPosition()));
     addUnitSettings(enemy_unit);
     printMessages();
 }
@@ -167,31 +167,31 @@ void LoggingModule::killed(std::shared_ptr<Unit> unit){
 }
 
 void LoggingModule::killed(std::shared_ptr<HeroUnit> hero_unit){
-    addMessage("HeroUnit was killed at position: " + convertVectorToString(hero_unit->position));
+    addMessage("HeroUnit was killed at position: " + convertVectorToString(hero_unit->getPosition()));
     printMessages();
 }
 
 void LoggingModule::killed(std::shared_ptr<WeakEnemyUnit> enemy_unit){
-    addMessage("WeakEnemyUnit was killed at position: " + convertVectorToString(enemy_unit->position));
+    addMessage("WeakEnemyUnit was killed at position: " + convertVectorToString(enemy_unit->getPosition()));
     printMessages();
 }
 
 void LoggingModule::killed(std::shared_ptr<StrongEnemyUnit> enemy_unit){
-    addMessage("StrongEnemyUnit was killed at position: " + convertVectorToString(enemy_unit->position));
+    addMessage("StrongEnemyUnit was killed at position: " + convertVectorToString(enemy_unit->getPosition()));
     printMessages();
 }
 
 void LoggingModule::killed(std::shared_ptr<MightyEnemyUnit> enemy_unit){
-    addMessage("MightyEnemyUnit was killed at position: " + convertVectorToString(enemy_unit->position));
+    addMessage("MightyEnemyUnit was killed at position: " + convertVectorToString(enemy_unit->getPosition()));
     printMessages();
 }
 
 void LoggingModule::killed(std::shared_ptr<EnemySuperAttackDecorator> decorator){
-    addMessage("Decorated EnemyUnit with super attack was killed at position: " + convertVectorToString(decorator->position));
+    addMessage("Decorated EnemyUnit with super attack was killed at position: " + convertVectorToString(decorator->getPosition()));
     printMessages();
 }
 
 void LoggingModule::killed(std::shared_ptr<EnemyMovementDecorator> decorator){
-    addMessage("Decorated EnemyUnit with movement was killed at position: " + convertVectorToString(decorator->position));
+    addMessage("Decorated EnemyUnit with movement was killed at position: " + convertVectorToString(decorator->getPosition()));
     printMessages();
 }

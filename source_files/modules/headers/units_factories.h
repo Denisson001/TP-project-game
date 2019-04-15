@@ -21,7 +21,6 @@ public:
 
 protected:
 	void setUnitSettings(std::shared_ptr<Unit> unit, Vector position, double attack_cooldown, double attack_range, int damage, int health);
-	void setEnemyUnitGridPosition(std::shared_ptr<EnemyUnit> enemy_unit);
 
 public:
 	virtual std::shared_ptr<WeakEnemyUnit> createWeakEnemyUnit(Vector position) = 0;

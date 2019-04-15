@@ -45,3 +45,15 @@ void MightyEnemyUnit::updateAttackModule(double time){
         current_attack_cooldown = max_attack_cooldown;
     }
 }
+
+void WeakEnemyUnit::upgrade(){
+    damage += WEAK_ENEMY_ADDITIONAL_DAMAGE;
+}
+
+void StrongEnemyUnit::upgrade(){
+    attack_range *= STRONG_ENEMY_ADDITIONAL_ATTACK_RANGE_COEFFICIENT;
+}
+
+void MightyEnemyUnit::upgrade(){
+    health += MIGHTY_ENEMY_ADDITIONAL_HEALTH;
+}

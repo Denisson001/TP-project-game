@@ -44,3 +44,8 @@ void HeroUnit::updateAttackModule(double time){
 		}
 	}
 }
+
+
+std::shared_ptr<Controller>& HeroUnit::getController(){
+	return controller;
+}

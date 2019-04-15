@@ -1,5 +1,6 @@
 #include <game.h>
 #include <enemy_units_decorators.h>
+#include <enemy_units_booster.h>
 #include <game_proxy.h>
 #include <logging_module.h>
 
@@ -40,13 +41,15 @@ void Game::checkHeroUnitBullets(double time){
 			sf::FloatRect enemy_unit_bounds = enemy_units[j]->getBounds();
 
 			if (enemy_unit_bounds.intersects(bullet_bounds)){
-				enemy_units[j]->health -= hero_unit_bullets[i]->damage;
+				enemy_units[j]->getHealth() -= hero_unit_bullets[i]->damage;
 
-				if (enemy_units[j]->health <= 0){
+				if (enemy_units[j]->getHealth() <= 0){
 					if (MAKE_LOGS)
 						LoggingModule::killed(enemy_units[j]);
 
 					eraseFromVector(enemy_units, j);
+
+					EnemyUnitsBooster::update();
 
 					enemy_units_spawn_timer = std::min(enemy_units_spawn_timer,
 						(int)enemy_units.size() < MIN_ENEMY_UNITS_AMOUNT ?
@@ -77,7 +80,7 @@ void Game::checkEnemyUnitsBullets(double time){
 		bool deleted = 0;
 
 		if (hero_unit_bounds.intersects(enemy_bullet_bounds)){
-			hero_unit->health -= enemy_units_bullets[i]->damage;
+			hero_unit->getHealth() -= enemy_units_bullets[i]->damage;
 			deleted = 1;
 		}
 
@@ -146,6 +149,10 @@ void Game::spawnEnemyUnits(){
 				if (MAKE_LOGS)
 					LoggingModule::created(enemy_unit);
 			}
+
+			enemy_unit->updateGridPosition();
+			GameProxy::setGridCellValue(enemy_unit->getCurrentGridPosition(), 1);
+			EnemyUnitsBooster::addEnemyUnit(enemy_unit);
 
 			enemy_units.push_back(enemy_unit);
 		}

@@ -17,8 +17,8 @@ void Window::display(std::shared_ptr<Game> game){
 	window.clear();
 
 	for (auto& unit : game->enemy_units){
-		unit->shape->setPosition(unit->position.x, unit->position.y);
-		window.draw(*unit->shape);
+		unit->getShape()->setPosition(unit->getPosition().x, unit->getPosition().y);
+		window.draw(*unit->getShape());
 	}
 
 	for (auto& enemy_unit_bullet : game->enemy_units_bullets){
@@ -31,8 +31,8 @@ void Window::display(std::shared_ptr<Game> game){
 		window.draw(*hero_unit_bullet->shape);
 	}
 
-	game->hero_unit->shape->setPosition(game->hero_unit->position.x, game->hero_unit->position.y);
-	window.draw(*game->hero_unit->shape);
+	game->hero_unit->getShape()->setPosition(game->hero_unit->getPosition().x, game->hero_unit->getPosition().y);
+	window.draw(*game->hero_unit->getShape());
 
 	window.display();
 }
