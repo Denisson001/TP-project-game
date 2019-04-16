@@ -5,66 +5,66 @@
 #include <game_settings.h>
 
 void Unit::update(double time){
-    updateAttackModule(time);
-    updateMovementModule(time);
+   updateAttackModule(time);
+   updateMovementModule(time);
 }
 
 sf::FloatRect Unit::getBounds(){
-    getShape()->setPosition(getPosition().x, getPosition().y);
-    sf::FloatRect bounds = getShape()->getGlobalBounds();
-	bounds.left += bounds.width * (1 - UNIT_SHAPE_BOUNDS_COEFFICIENT) / (double)2;
-	bounds.top += bounds.height * (1 - UNIT_SHAPE_BOUNDS_COEFFICIENT) / (double)2;
-	bounds.height *= UNIT_SHAPE_BOUNDS_COEFFICIENT;
-	bounds.width *= UNIT_SHAPE_BOUNDS_COEFFICIENT;
-    return bounds;
+   getShape()->setPosition(getPosition().x, getPosition().y);
+   sf::FloatRect bounds = getShape()->getGlobalBounds();
+   bounds.left += bounds.width * (1 - UNIT_SHAPE_BOUNDS_COEFFICIENT) / (double)2;
+   bounds.top += bounds.height * (1 - UNIT_SHAPE_BOUNDS_COEFFICIENT) / (double)2;
+   bounds.height *= UNIT_SHAPE_BOUNDS_COEFFICIENT;
+   bounds.width *= UNIT_SHAPE_BOUNDS_COEFFICIENT;
+   return bounds;
 }
 
 void EnemyUnit::updateGridPosition(){
-    double best_value = 1e9;
-    getCurrentGridPosition() = std::make_pair(1, 1);
-    for (int i = 1; i < HORIZONTAL_DOTS_AMOUNT; i++){
-        for (int j = 1; j < VERTICAL_DOTS_AMOUNT; j++){
-            Vector current_position(i * HORIZONTAL_GAP_SIZE, j * VERITCAL_GAP_SIZE);
-            if ((getPosition() - current_position).length() < best_value){
-                best_value = (getPosition() - current_position).length();
-                getCurrentGridPosition() = std::make_pair(i, j);
-            }
-        }
-    }
+   double best_value = 1e9;
+   getCurrentGridPosition() = std::make_pair(1, 1);
+   for (int i = 1; i < HORIZONTAL_DOTS_AMOUNT; i++){
+      for (int j = 1; j < VERTICAL_DOTS_AMOUNT; j++){
+         Vector current_position(i * HORIZONTAL_GAP_SIZE, j * VERITCAL_GAP_SIZE);
+         if ((getPosition() - current_position).length() < best_value){
+            best_value = (getPosition() - current_position).length();
+            getCurrentGridPosition() = std::make_pair(i, j);
+         }
+      }
+   }
 }
 
 EnemyUnit::~EnemyUnit(){
-    GameProxy::setGridCellValue(getCurrentGridPosition(), 0);
+   GameProxy::setGridCellValue(getCurrentGridPosition(), 0);
 }
 
 Vector& Unit::getPosition(){
-    return position;
+   return position;
 }
 
 std::shared_ptr<sf::Shape>& Unit::getShape(){
-    return shape;
+   return shape;
 }
 
 double& Unit::getAttackRange(){
-    return attack_range;
+   return attack_range;
 }
 
 int& Unit::getDamage(){
-    return damage;
+   return damage;
 }
 
 int& Unit::getHealth(){
-    return health;
+   return health;
 }
 
 double& Unit::getMaxAttackCooldown(){
-    return max_attack_cooldown;
+   return max_attack_cooldown;
 }
 
 double& EnemyUnit::getCurrentAttackCooldown(){
-    return current_attack_cooldown;
+   return current_attack_cooldown;
 }
 
 std::pair<int, int>& EnemyUnit::getCurrentGridPosition(){
-    return current_grid_position;
+   return current_grid_position;
 }

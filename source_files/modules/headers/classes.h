@@ -16,6 +16,7 @@ class Controller;
 class KeyboardController;
 class Bullet;
 class GameProxy;
+class EnemyUnitDecorator;
 class EnemySuperAttackDecorator;
 class EnemyMovementDecorator;
 class EnemyUnitsBooster;

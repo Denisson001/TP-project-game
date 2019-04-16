@@ -26,11 +26,12 @@ private:
 	std::pair<int, int> getRandomFreeGridCell();
 	void spawnEnemyUnits();
 	bool grid[HORIZONTAL_DOTS_AMOUNT][VERTICAL_DOTS_AMOUNT];
-	double timer, enemy_units_spawn_timer;
+	double enemy_units_spawn_timer;
 	template<class T>
 	void eraseFromVector(std::vector<T>& vector, int& index);
 
 public:
+	double timer;
 	int killed_enemy_units_amount;
 	Game(UnitsFactory& enemy_units_factory);
 	void update(double time);

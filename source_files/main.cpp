@@ -11,38 +11,39 @@
 #include <technical_settings.h>
 
 UnitsFactory& getFactory(const std::string& s){
-	if (s == "Circle")
-		return CircleUnitsFactory::getInstance();
-	else
-		return SquareUnitsFactory::getInstance();
+   if (s == "Circle")
+      return CircleUnitsFactory::getInstance();
+   else
+      return SquareUnitsFactory::getInstance();
 }
 
 #include <iostream>
 
 int main(int argc, char* argv[]){
-	int seed = abs(atoi(argv[3]));
-	srand(seed);
+   int seed = abs(atoi(argv[3]));
+   srand(seed);
 
-	UnitsFactory& enemy_units_factory = getFactory(std::string(argv[1]));
-	UnitsFactory& hero_unit_factory = getFactory(std::string(argv[2]));
+   UnitsFactory& enemy_units_factory = getFactory(std::string(argv[1]));
+   UnitsFactory& hero_unit_factory = getFactory(std::string(argv[2]));
 
-	if (MAKE_LOGS)
-		LoggingModule::initialize(seed);
-	std::shared_ptr<Game> game = std::make_shared<Game>(enemy_units_factory);
-	GameProxy::setGameInstance(game);
-	game->initialize(hero_unit_factory);
-	Window window;
-	sf::Clock clock;
+   if (MAKE_LOGS)
+      LoggingModule::initialize(seed);
+   std::shared_ptr<Game> game = std::make_shared<Game>(enemy_units_factory);
+   GameProxy::setGameInstance(game);
+   game->initialize(hero_unit_factory);
+   Window window;
+   sf::Clock clock;
 
-	while (1){
-		if (window.isClosed() || game->end())
-			break;
-		double time_delta = clock.getElapsedTime().asMilliseconds();
-		clock.restart();
-		game->update(time_delta);
-		window.display(game);
-	}
+   while (1){
+      if (window.isClosed() || game->end())
+         break;
+      double time_delta = clock.getElapsedTime().asMilliseconds();
+      clock.restart();
+      game->update(time_delta);
+      window.display(game);
+   }
 
-	std::cout << "*** GAME OVER ***\n";
-	std::cout << "You killed " << game->killed_enemy_units_amount << " enemy units!\n";
+   std::cout << "*** GAME OVER ***\n";
+   std::cout << "You killed " << game->killed_enemy_units_amount << " enemy units!\n";
+   std::cout << "Time: " << (int)(game->timer / 1000) / 60 << " minutes " << (int)(game->timer / 1000) % 60 << " seconds\n";
 }
