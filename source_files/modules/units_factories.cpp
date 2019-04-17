@@ -102,7 +102,7 @@ std::shared_ptr<MightyEnemyUnit> SquareUnitsFactory::createMightyEnemyUnit(Vecto
 
 std::shared_ptr<HeroUnit> SquareUnitsFactory::createHeroUnit(Vector position, std::shared_ptr<Controller> controller){
    std::shared_ptr<HeroUnit> unit = std::make_shared<HeroUnit>();
-   unit->getShape() = createUnitShape(SQUARE_STRONG_ENEMY_SHAPE_SIZE, HERO_SHAPE_COLOR);
+   unit->getShape() = createUnitShape(SQUARE_HERO_SHAPE_SIZE, HERO_SHAPE_COLOR);
    setHeroUnitSettings(unit, position, SQUARE_HERO_ATTACK_COOLDOWN, HERO_ATTACK_RANGE, SQUARE_HERO_DAMAGE, HERO_HEALTH, controller);
    return unit;
 }

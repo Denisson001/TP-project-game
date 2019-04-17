@@ -178,7 +178,3 @@ void Game::update(double time){
 
    spawnEnemyUnits();
 }
-
-bool Game::end(){
-   return hero_unit->getHealth() <= 0;
-}

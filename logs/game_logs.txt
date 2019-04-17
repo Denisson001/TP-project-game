@@ -1,5 +1,21 @@
 *** START LOGGING ***
-seed: 123
+seed: 123235
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 3
+        Health: 100
+        Attack range: 600
+
+
+[00:01] StrongEnemyUnit created at position: (1120, 540)
+        Damage: 3
+        Health: 10
+        Attack range: 530
+        Attack cooldown: 1550
+
+
+[00:01] EnemyMovementDecorator has been applied
+
 
 [00:00] HeroUnit created at position: (640, 360)
         Damage: 2
@@ -7,10 +23,1995 @@ seed: 123
         Attack range: 600
 
 
-[00:01] WeakEnemyUnit created at position: (480, 360)
+[00:00] HeroUnit created at position: (640, 360)
         Damage: 2
-        Health: 5
-        Attack range: 480
-        Attack cooldown: 1300
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
+
+
+[00:00] HeroUnit created at position: (640, 360)
+        Damage: 2
+        Health: 100
+        Attack range: 600
 
 

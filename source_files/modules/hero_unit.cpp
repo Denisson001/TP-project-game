@@ -36,7 +36,7 @@ void HeroUnit::updateAttackModule(double time){
 
 void HeroUnit::changeAttackModule(){
    current_attack_module_index++;
-   if (current_attack_module_index == attack_modules.size())
+   if (current_attack_module_index == (int)attack_modules.size())
       current_attack_module_index = 0;
    attack_module = attack_modules[current_attack_module_index];
    attack_module->initialize();

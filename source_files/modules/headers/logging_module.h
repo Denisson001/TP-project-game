@@ -7,7 +7,6 @@
 #include <enemy_units_decorators.h>
 #include <classes.h>
 
-
 class LoggingModule{
 private:
     static std::vector<std::string> text;

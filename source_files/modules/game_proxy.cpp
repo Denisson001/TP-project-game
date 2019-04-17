@@ -3,8 +3,25 @@
 
 std::shared_ptr<Game> GameProxy::game = nullptr;
 
-void GameProxy::setGameInstance(std::shared_ptr<Game> game_instance){
-   game = game_instance;
+void GameProxy::initialize(UnitsFactory& hero_unit_factory, UnitsFactory& enemy_units_factory){
+    game = std::make_shared<Game>(enemy_units_factory);
+    game->initialize(hero_unit_factory);
+}
+
+void GameProxy::update(double time){
+    game->update(time);
+}
+
+bool GameProxy::end(){
+    return game->hero_unit->getHealth() <= 0;
+}
+
+std::shared_ptr<Game> GameProxy::getGameInstance(){
+    return game;
+}
+
+int GameProxy::getKilledEnemyUnitsAmount(){
+    return game->killed_enemy_units_amount;
 }
 
 Vector GameProxy::getHeroUnitPosition(){

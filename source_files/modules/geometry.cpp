@@ -1,10 +1,11 @@
-#include<cmath>
+#include <cmath>
 
 #include <geometry.h>
 
 #include <math_settings.h>
 
 Vector::Vector(){}
+
 Vector::Vector(double x, double y): x(x), y(y){}
 
 Vector Vector::operator*(double value){
@@ -13,6 +14,10 @@ Vector Vector::operator*(double value){
 
 Vector Vector::operator-(const Vector& next){
    return Vector(x - next.x, y - next.y);
+}
+
+Vector Vector::operator+(const Vector& next){
+   return Vector(x + next.x, y + next.y);
 }
 
 Vector& Vector::operator+=(const Vector& next){

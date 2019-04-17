@@ -1,5 +1,6 @@
 #include <string>
 #include <memory>
+#include <iostream>
 
 #include <game.h>
 #include <window.h>
@@ -17,7 +18,11 @@ UnitsFactory& getFactory(const std::string& s){
       return SquareUnitsFactory::getInstance();
 }
 
-#include <iostream>
+void printStatistics(){
+   std::cout << "*** GAME OVER ***\n";
+   std::cout << "You killed " << GameProxy::getKilledEnemyUnitsAmount() << " enemy units!\n";
+   std::cout << "Time: " << (int)(GameProxy::getTime() / 1000) / 60 << " minutes " << (int)(GameProxy::getTime() / 1000) % 60 << " seconds\n";
+}
 
 int main(int argc, char* argv[]){
    int seed = abs(atoi(argv[3]));
@@ -28,22 +33,18 @@ int main(int argc, char* argv[]){
 
    if (MAKE_LOGS)
       LoggingModule::initialize(seed);
-   std::shared_ptr<Game> game = std::make_shared<Game>(enemy_units_factory);
-   GameProxy::setGameInstance(game);
-   game->initialize(hero_unit_factory);
+   GameProxy::initialize(hero_unit_factory, enemy_units_factory);
    Window window;
    sf::Clock clock;
 
    while (1){
-      if (window.isClosed() || game->end())
+      if (window.isClosed() || GameProxy::end())
          break;
       double time_delta = clock.getElapsedTime().asMilliseconds();
       clock.restart();
-      game->update(time_delta);
-      window.display(game);
+      GameProxy::update(time_delta);
+      window.display(GameProxy::getGameInstance());
    }
 
-   std::cout << "*** GAME OVER ***\n";
-   std::cout << "You killed " << game->killed_enemy_units_amount << " enemy units!\n";
-   std::cout << "Time: " << (int)(game->timer / 1000) / 60 << " minutes " << (int)(game->timer / 1000) % 60 << " seconds\n";
+   printStatistics();
 }

@@ -11,7 +11,6 @@ private:
 
 public:
     GameProxy() = delete;
-    static void setGameInstance(std::shared_ptr<Game> game_instance);
     static Vector getHeroUnitPosition();
     static void addEnemyUnitBullet(std::shared_ptr<Bullet> bullet);
     static void addHeroUnitBullet(std::shared_ptr<Bullet> bullet);
@@ -20,4 +19,9 @@ public:
     static bool checkHeroUnitPosition();
     static bool checkEnemyUnitPosition(sf::FloatRect enemy_unit_bounds);
     static double getTime();
+    static void initialize(UnitsFactory& hero_unit_factory, UnitsFactory& enemy_units_factory);
+    static void update(double time);
+    static bool end();
+    static std::shared_ptr<Game> getGameInstance();
+    static int getKilledEnemyUnitsAmount();
 };
