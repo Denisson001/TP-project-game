@@ -36,13 +36,10 @@ add_executable(${PROJECT_NAME}  ${TESTS_FILES_PATH}/tests/main.cpp
 				${TESTS_FILES_PATH}/tests/game_proxy_tests.cpp
 				${TESTS_FILES_PATH}/tests/enemy_units_booster_tests.cpp
 				${TESTS_FILES_PATH}/tests/units_factories_tests.cpp
-
-
-
+				${TESTS_FILES_PATH}/tests/hero_unit_attack_module_tests.cpp
 
 				${TESTS_FILES_PATH}/modules/testing_module.cpp
-				#${TESTS_FILES_PATH}/modules/fake_controller.cpp)
-				)
+				${TESTS_FILES_PATH}/modules/fake_controller.cpp)
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 if(NOT Boost_FOUND)

@@ -5,8 +5,9 @@
 class FakeController : public Controller{
 private:
 	bool up, down, left, right;
+	bool up_arrow, down_arrow, left_arrow, right_arrow;
 public:
-	FakeController(bool up, bool down, bool left, bool right);
+	FakeController(std::string mask);
 	bool isUpKeyPressed();
 	bool isDownKeyPressed();
 	bool isLeftKeyPressed();

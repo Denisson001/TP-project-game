@@ -12,8 +12,8 @@ void WeakEnemyUnit::updateAttackModule(double time){
 
    if (current_attack_cooldown < EPS){
       Vector hero_unit_position = GameProxy::getHeroUnitPosition();
-      Vector vector = hero_unit_position - position;
-      GameProxy::addEnemyUnitBullet(std::make_shared<Bullet>(shape->getFillColor(), position, vector.resize(BULLET_SPEED), damage, attack_range));
+      Vector direction = hero_unit_position - position;
+      addBullet(direction);
       current_attack_cooldown = max_attack_cooldown;
    }
 }
@@ -23,10 +23,9 @@ void StrongEnemyUnit::updateAttackModule(double time){
 
    if (current_attack_cooldown < EPS){
       Vector hero_unit_position = GameProxy::getHeroUnitPosition();
-      Vector vector = hero_unit_position - position;
-      GameProxy::addEnemyUnitBullet(std::make_shared<Bullet>(shape->getFillColor(), position, vector.resize(BULLET_SPEED), damage, attack_range));
-      GameProxy::addEnemyUnitBullet(std::make_shared<Bullet>(shape->getFillColor(), position, vector.resize(BULLET_SPEED).rotate(BULLET_DEFLECTION_ANGLE), damage, attack_range));
-      GameProxy::addEnemyUnitBullet(std::make_shared<Bullet>(shape->getFillColor(), position, vector.resize(BULLET_SPEED).rotate(-BULLET_DEFLECTION_ANGLE), damage, attack_range));
+      Vector direction = hero_unit_position - position;
+      for (int i = -1; i <= 1; i++)
+         addBullet(direction.rotate(BULLET_DEFLECTION_ANGLE * i));
       current_attack_cooldown = max_attack_cooldown;
    }
 }
@@ -36,12 +35,9 @@ void MightyEnemyUnit::updateAttackModule(double time){
 
    if (current_attack_cooldown < EPS){
       Vector hero_unit_position = GameProxy::getHeroUnitPosition();
-      Vector vector = hero_unit_position - position;
-      GameProxy::addEnemyUnitBullet(std::make_shared<Bullet>(shape->getFillColor(), position, vector.resize(BULLET_SPEED), damage, attack_range));
-      GameProxy::addEnemyUnitBullet(std::make_shared<Bullet>(shape->getFillColor(), position, vector.resize(BULLET_SPEED).rotate(BULLET_DEFLECTION_ANGLE), damage, attack_range));
-      GameProxy::addEnemyUnitBullet(std::make_shared<Bullet>(shape->getFillColor(), position, vector.resize(BULLET_SPEED).rotate(2 * BULLET_DEFLECTION_ANGLE), damage, attack_range));
-      GameProxy::addEnemyUnitBullet(std::make_shared<Bullet>(shape->getFillColor(), position, vector.resize(BULLET_SPEED).rotate(-BULLET_DEFLECTION_ANGLE), damage, attack_range));
-      GameProxy::addEnemyUnitBullet(std::make_shared<Bullet>(shape->getFillColor(), position, vector.resize(BULLET_SPEED).rotate(-2 * BULLET_DEFLECTION_ANGLE), damage, attack_range));
+      Vector direction = hero_unit_position - position;
+      for (int i = -2; i <= 2; i++)
+         addBullet(direction.rotate(BULLET_DEFLECTION_ANGLE * i));
       current_attack_cooldown = max_attack_cooldown;
    }
 }

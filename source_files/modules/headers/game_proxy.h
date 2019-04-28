@@ -19,7 +19,7 @@ public:
     static bool checkHeroUnitPosition();
     static bool checkEnemyUnitPosition(sf::FloatRect enemy_unit_bounds);
     static double getTime();
-    static void initialize(UnitsFactory& hero_unit_factory, UnitsFactory& enemy_units_factory);
+    static void initialize(UnitsFactory& hero_unit_factory, UnitsFactory& enemy_units_factory, std::shared_ptr<Controller> controller);
     static void update(double time);
     static bool end();
     static std::shared_ptr<Game> getGameInstance();

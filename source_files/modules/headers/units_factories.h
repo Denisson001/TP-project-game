@@ -9,6 +9,10 @@
 #include <units_settings.h>
 
 class UnitsFactory{
+#ifdef TESTING_MODE
+	friend TestingModule;
+#endif
+
 /* SINGLTON PATTERN */
 protected:
 	UnitsFactory(){}
@@ -23,6 +27,7 @@ protected:
 	void setEnemyUnitSettings(std::shared_ptr<EnemyUnit> enemy_unit, Vector position, double attack_cooldown, double attack_range, int damage, int health);
 	void setHeroUnitSettings(std::shared_ptr<HeroUnit> hero_unit, Vector position, double attack_cooldown,
 								double attack_range, int damage, int health, std::shared_ptr<Controller> controller);
+	virtual std::shared_ptr<sf::Shape> createUnitShape(double unit_shape_size, sf::Color unit_shape_color) = 0;
 
 public:
 	virtual std::shared_ptr<WeakEnemyUnit> createWeakEnemyUnit(Vector position) = 0;
@@ -32,10 +37,6 @@ public:
 };
 
 class CircleUnitsFactory : public UnitsFactory{
-#ifdef TESTING_MODE
-	friend TestingModule;
-#endif
-
 /* SINGLTON PATTERN */
 private:
 	CircleUnitsFactory(){}
@@ -45,7 +46,7 @@ public:
 	static CircleUnitsFactory& getInstance();
 /*==================*/
 
-private:
+protected:
 	std::shared_ptr<sf::Shape> createUnitShape(double unit_shape_size, sf::Color unit_shape_color);
 
 public:
@@ -56,10 +57,6 @@ public:
 };
 
 class SquareUnitsFactory : public UnitsFactory{
-#ifdef TESTING_MODE
-	friend TestingModule;
-#endif
-
 /* SINGLTON PATTERN */
 private:
 	SquareUnitsFactory(){}
@@ -68,7 +65,7 @@ public:
 	static SquareUnitsFactory& getInstance();
 /*==================*/
 
-private:
+protected:
 	std::shared_ptr<sf::Shape> createUnitShape(double unit_shape_size, sf::Color unit_shape_color);
 
 public:

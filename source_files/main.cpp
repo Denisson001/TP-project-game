@@ -5,6 +5,7 @@
 #include <game.h>
 #include <window.h>
 #include <units_factories.h>
+#include <controller.h>
 
 #include <game_proxy.h>
 #include <logging_module.h>
@@ -33,7 +34,7 @@ int main(int argc, char* argv[]){
 
    if (MAKE_LOGS)
       LoggingModule::initialize(seed);
-   GameProxy::initialize(hero_unit_factory, enemy_units_factory);
+   GameProxy::initialize(hero_unit_factory, enemy_units_factory, std::make_shared<KeyboardController>());
    Window window;
    sf::Clock clock;
 

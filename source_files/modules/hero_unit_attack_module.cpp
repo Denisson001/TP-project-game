@@ -28,8 +28,7 @@ void SingleShotModule::update(double time, HeroUnit* hero_unit){
       std::pair<int, int> direction = getDirectionFromController(hero_unit->getController());
       int dx = direction.first, dy = direction.second;
       if (dx != 0 || dy != 0){
-         GameProxy::addHeroUnitBullet(std::make_shared<Bullet>(hero_unit->getShape()->getFillColor(), hero_unit->getPosition(),
-                                 Vector(dx, dy).resize(BULLET_SPEED), hero_unit->getDamage(), hero_unit->getAttackRange()));
+         hero_unit->addBullet(Vector(dx, dy));
          current_attack_cooldown = hero_unit->getMaxAttackCooldown();
       }
    }
@@ -42,12 +41,9 @@ void SplitShotModule::update(double time, HeroUnit* hero_unit){
       std::pair<int, int> direction = getDirectionFromController(hero_unit->getController());
       int dx = direction.first, dy = direction.second;
       if (dx != 0 || dy != 0){
-         GameProxy::addHeroUnitBullet(std::make_shared<Bullet>(hero_unit->getShape()->getFillColor(), hero_unit->getPosition(),
-                                 Vector(dx, dy).resize(BULLET_SPEED), hero_unit->getDamage(), hero_unit->getAttackRange()));
-         GameProxy::addHeroUnitBullet(std::make_shared<Bullet>(hero_unit->getShape()->getFillColor(), hero_unit->getPosition(),
-                                 Vector(dx, dy).resize(BULLET_SPEED).rotate(BULLET_DEFLECTION_ANGLE), hero_unit->getDamage(), hero_unit->getAttackRange()));
-         GameProxy::addHeroUnitBullet(std::make_shared<Bullet>(hero_unit->getShape()->getFillColor(), hero_unit->getPosition(),
-                                 Vector(dx, dy).resize(BULLET_SPEED).rotate(-BULLET_DEFLECTION_ANGLE), hero_unit->getDamage(), hero_unit->getAttackRange()));
+         for (int i = -1; i <= 1; i++){
+            hero_unit->addBullet(Vector(dx, dy).rotate(BULLET_DEFLECTION_ANGLE * i));
+         }
          current_attack_cooldown = hero_unit->getMaxAttackCooldown();
       }
    }
@@ -61,16 +57,14 @@ void TripleShotModule::update(double time, HeroUnit* hero_unit){
          std::pair<int, int> direction = getDirectionFromController(hero_unit->getController());
          int dx = direction.first, dy = direction.second;
          if (dx != 0 || dy != 0){
-            GameProxy::addHeroUnitBullet(std::make_shared<Bullet>(hero_unit->getShape()->getFillColor(), hero_unit->getPosition(),
-                                    Vector(dx, dy).resize(BULLET_SPEED), hero_unit->getDamage(), hero_unit->getAttackRange()));
+            hero_unit->addBullet(Vector(dx, dy));
             current_attack_direction = direction;
             current_attack_cooldown = HERO_MINI_ATTACK_COOLDOWN;
             created_bullets_amount = 1;
          }
       } else {
          int dx = current_attack_direction.first, dy = current_attack_direction.second;
-         GameProxy::addHeroUnitBullet(std::make_shared<Bullet>(hero_unit->getShape()->getFillColor(), hero_unit->getPosition(),
-                                 Vector(dx, dy).resize(BULLET_SPEED), hero_unit->getDamage(), hero_unit->getAttackRange()));
+         hero_unit->addBullet(Vector(dx, dy));
          created_bullets_amount++;
          if (created_bullets_amount == 3){
             created_bullets_amount = 0;

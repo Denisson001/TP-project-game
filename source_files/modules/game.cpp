@@ -18,8 +18,8 @@ Game::Game(UnitsFactory& enemy_units_factory): enemy_units_factory(enemy_units_f
    killed_enemy_units_amount = 0;
 }
 
-void Game::initialize(UnitsFactory& hero_unit_factory){
-   hero_unit = hero_unit_factory.createHeroUnit(Vector(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2), std::make_shared<KeyboardController>());
+void Game::initialize(UnitsFactory& hero_unit_factory, std::shared_ptr<Controller> controller){
+   hero_unit = hero_unit_factory.createHeroUnit(Vector(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2), controller);
    if (MAKE_LOGS)
       LoggingModule::created(hero_unit);
 }

@@ -3,9 +3,9 @@
 
 std::shared_ptr<Game> GameProxy::game = nullptr;
 
-void GameProxy::initialize(UnitsFactory& hero_unit_factory, UnitsFactory& enemy_units_factory){
+void GameProxy::initialize(UnitsFactory& hero_unit_factory, UnitsFactory& enemy_units_factory, std::shared_ptr<Controller> controller){
     game = std::make_shared<Game>(enemy_units_factory);
-    game->initialize(hero_unit_factory);
+    game->initialize(hero_unit_factory, controller);
 }
 
 void GameProxy::update(double time){

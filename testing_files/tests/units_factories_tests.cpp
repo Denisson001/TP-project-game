@@ -66,7 +66,7 @@ BOOST_AUTO_TEST_CASE(hero_unit){
 }
 
 BOOST_AUTO_TEST_CASE(shape_creating){
-	std::shared_ptr<sf::Shape> shape = TestingModule::callCreateUnitShapeFromCircleUnitsFactory(100, sf::Color::Black);
+	std::shared_ptr<sf::Shape> shape = TestingModule::createCircleUnitShape(CircleUnitsFactory::getInstance(), 100, sf::Color::Black);
 	BOOST_CHECK(std::dynamic_pointer_cast<sf::CircleShape>(shape));
 	BOOST_CHECK(shape->getFillColor() == sf::Color::Black);
 	BOOST_CHECK_CLOSE_FRACTION(shape->getLocalBounds().width / 100, 1, eps2);
@@ -117,7 +117,7 @@ BOOST_AUTO_TEST_CASE(hero_unit){
 }
 
 BOOST_AUTO_TEST_CASE(shape_creating){
-	std::shared_ptr<sf::Shape> shape = TestingModule::callCreateUnitShapeFromSquareUnitsFactory(250, sf::Color::Yellow);
+	std::shared_ptr<sf::Shape> shape = TestingModule::createCircleUnitShape(SquareUnitsFactory::getInstance(), 250, sf::Color::Yellow);
 	BOOST_CHECK(std::dynamic_pointer_cast<sf::RectangleShape>(shape));
 	BOOST_CHECK(shape->getFillColor() == sf::Color::Yellow);
 	BOOST_CHECK_CLOSE_FRACTION(shape->getLocalBounds().width / 250, 1, eps2);

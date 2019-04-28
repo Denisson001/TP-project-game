@@ -42,6 +42,11 @@ void HeroUnit::changeAttackModule(){
    attack_module->initialize();
 }
 
+void HeroUnit::addBullet(Vector direction){
+   GameProxy::addHeroUnitBullet(std::make_shared<Bullet>(shape->getFillColor(), position,
+                                direction.resize(BULLET_SPEED), damage, attack_range));
+}
+
 std::shared_ptr<Controller>& HeroUnit::getController(){
    return controller;
 }

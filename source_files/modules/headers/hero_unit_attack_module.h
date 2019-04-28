@@ -5,6 +5,10 @@
 #include <classes.h>
 
 class HeroUnitAttackModule{
+#ifdef TESTING_MODE
+	friend TestingModule;
+#endif
+
 protected:
     double current_attack_cooldown;
     std::pair<int, int> getDirectionFromController(std::shared_ptr<Controller> controller);

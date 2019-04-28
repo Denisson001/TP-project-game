@@ -19,6 +19,11 @@ sf::FloatRect Unit::getBounds(){
    return bounds;
 }
 
+void EnemyUnit::addBullet(Vector direction){
+   GameProxy::addEnemyUnitBullet(std::make_shared<Bullet>(getShape()->getFillColor(), getPosition(),
+                                 direction.resize(BULLET_SPEED), getDamage(), getAttackRange()));
+}
+
 void EnemyUnit::updateGridPosition(){
    double best_value = 1e9;
    getCurrentGridPosition() = std::make_pair(1, 1);

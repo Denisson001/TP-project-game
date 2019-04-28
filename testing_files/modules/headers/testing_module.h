@@ -6,14 +6,15 @@
 
 #include <game.h>
 #include <enemy_units_booster.h>
+#include <hero_unit_attack_module.h>
 
 class TestingModule{
 public:
-	static std::shared_ptr<HeroUnit> getHeroUnitFromGame(std::shared_ptr<Game> game);
-	static std::vector<std::shared_ptr<Bullet>>& getEnemyUnitsBulletsFromGame(std::shared_ptr<Game> game);
-	static std::vector<std::shared_ptr<Bullet>>& getHeroUnitBulletsFromGame(std::shared_ptr<Game> game);
-	static std::vector<std::shared_ptr<EnemyUnit>>& getEnemyUnitsFromGame(std::shared_ptr<Game> game);
-	static int getEnemyUnitsAmountFromEnemyUnitsBooster();
-	static std::shared_ptr<sf::Shape> callCreateUnitShapeFromCircleUnitsFactory(double unit_shape_size, sf::Color unit_shape_color);
-	static std::shared_ptr<sf::Shape> callCreateUnitShapeFromSquareUnitsFactory(double unit_shape_size, sf::Color unit_shape_color);
+	static std::shared_ptr<HeroUnit> getHeroUnit(std::shared_ptr<Game> game);
+	static std::vector<std::shared_ptr<Bullet>>& getEnemyUnitsBullets(std::shared_ptr<Game> game);
+	static std::vector<std::shared_ptr<Bullet>>& getHeroUnitBullets(std::shared_ptr<Game> game);
+	static std::vector<std::shared_ptr<EnemyUnit>>& getEnemyUnits(std::shared_ptr<Game> game);
+	static int getEnemyUnitsAmount();
+	static std::shared_ptr<sf::Shape> createCircleUnitShape(UnitsFactory& units_factory, double unit_shape_size, sf::Color unit_shape_color);
+	static std::pair<int, int> getDirectionFromController(std::shared_ptr<HeroUnitAttackModule> attack_module, std::shared_ptr<Controller> controller);
 };

@@ -20,6 +20,7 @@ class Unit{
 protected:
 	virtual void updateAttackModule(double time) = 0;
 	virtual void updateMovementModule(double time) = 0;
+    virtual void addBullet(Vector direction) = 0;
 	Vector position;
 	std::shared_ptr<sf::Shape> shape;
 	double max_attack_cooldown, attack_range;
@@ -39,6 +40,7 @@ public:
 
 class EnemyUnit : public Unit{
 protected:
+	void addBullet(Vector direction);
 	std::pair<int, int> current_grid_position;
 	double current_attack_cooldown;
 
@@ -83,6 +85,9 @@ class HeroUnit : public Unit{
 #endif
 
 	friend UnitsFactory;
+	friend SingleShotModule;
+	friend SplitShotModule;
+	friend TripleShotModule;
 
 private:
 	void checkBorder();
@@ -92,6 +97,7 @@ private:
 	int current_attack_module_index;
 
 protected:
+	void addBullet(Vector direction);
 	void updateAttackModule(double time);
 	void updateMovementModule(double time);
 

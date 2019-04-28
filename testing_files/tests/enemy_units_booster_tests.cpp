@@ -3,6 +3,7 @@
 #include <game_proxy.h>
 #include <enemy_units_booster.h>
 #include <testing_module.h>
+#include <fake_controller.h>
 
 #include <units_settings.h>
 
@@ -11,7 +12,7 @@ const double eps9 = 1e-9;
 BOOST_AUTO_TEST_SUITE(ENEMY_UNITS_BOOSTER)
 
 BOOST_AUTO_TEST_CASE(update_method){
-    GameProxy::initialize(CircleUnitsFactory::getInstance(), SquareUnitsFactory::getInstance());
+    GameProxy::initialize(CircleUnitsFactory::getInstance(), SquareUnitsFactory::getInstance(), std::make_shared<FakeController>("00000000"));
     std::vector<std::shared_ptr<EnemyUnit>> enemy_units;
     for (int i = 0; i < 5; i++){
         enemy_units.push_back(SquareUnitsFactory::getInstance().createWeakEnemyUnit(Vector(0, 0)));
@@ -19,7 +20,7 @@ BOOST_AUTO_TEST_CASE(update_method){
     }
     enemy_units[2]->getHealth() = 0;
     EnemyUnitsBooster::update();
-    BOOST_CHECK((int)TestingModule::getEnemyUnitsAmountFromEnemyUnitsBooster() == 4);
+    BOOST_CHECK((int)TestingModule::getEnemyUnitsAmount() == 4);
     for (int i = 0; i < 5; i++) if (i != 2){
         int correct_health;
         if (i < 2){
