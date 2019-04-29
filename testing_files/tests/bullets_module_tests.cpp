@@ -4,7 +4,7 @@
 
 const double eps9 = 1e-9;
 
-BOOST_AUTO_TEST_SUITE(BULLETS)
+BOOST_AUTO_TEST_SUITE(BULLET)
 
 BOOST_AUTO_TEST_CASE(bullet_contructor){
     Vector position(4.2, -4.2);

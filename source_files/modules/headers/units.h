@@ -39,6 +39,10 @@ public:
 };
 
 class EnemyUnit : public Unit{
+#ifdef TESTING_MODE
+	friend TestingModule;
+#endif
+
 protected:
 	void addBullet(Vector direction);
 	std::pair<int, int> current_grid_position;

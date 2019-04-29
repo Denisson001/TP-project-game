@@ -27,3 +27,7 @@ std::shared_ptr<sf::Shape> TestingModule::createCircleUnitShape(UnitsFactory& un
 std::pair<int, int> TestingModule::getDirectionFromController(std::shared_ptr<HeroUnitAttackModule> attack_module, std::shared_ptr<Controller> controller){
 	return attack_module->getDirectionFromController(controller);
 }
+
+void TestingModule::updateAttackModule(std::shared_ptr<EnemyUnit> enemy_unit, double time){
+	enemy_unit->updateAttackModule(time);
+}
