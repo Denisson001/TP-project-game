@@ -6,8 +6,7 @@
 #include <fake_controller.h>
 
 #include <units_settings.h>
-
-const double eps9 = 1e-9;
+#include <math_settings.h>
 
 BOOST_AUTO_TEST_SUITE(ENEMY_UNITS_BOOSTER)
 

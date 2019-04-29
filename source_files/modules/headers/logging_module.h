@@ -10,10 +10,6 @@
 class LoggingModule{
 private:
     static std::vector<std::string> text;
-    static std::string convertTimeToString(double time);
-    static std::string convertIntToString(int value);
-    static std::string convertVectorToString(Vector vector);
-    static std::string getTime();
     static void printMessages();
     static void addMessage(const std::string& str);
     static void addEnemyUnitSettings(std::shared_ptr<EnemyUnit> enemy_unit);

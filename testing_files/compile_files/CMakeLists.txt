@@ -14,33 +14,37 @@ link_directories(${LIB_FILES_PATH}/SFML/lib)
 
 add_executable(${PROJECT_NAME}  ${TESTS_FILES_PATH}/tests/main.cpp
 
-				${SOURCE_FILES_PATH}/modules/game.cpp
-				${SOURCE_FILES_PATH}/modules/geometry.cpp
-				${SOURCE_FILES_PATH}/modules/enemy_units.cpp
-				${SOURCE_FILES_PATH}/modules/hero_unit.cpp
-				${SOURCE_FILES_PATH}/modules/window.cpp
-				${SOURCE_FILES_PATH}/modules/units_factories.cpp
-				${SOURCE_FILES_PATH}/modules/controller.cpp
-				${SOURCE_FILES_PATH}/modules/bullet.cpp
-				${SOURCE_FILES_PATH}/modules/game_proxy.cpp
-				${SOURCE_FILES_PATH}/modules/enemy_super_attack_decorator.cpp
-				${SOURCE_FILES_PATH}/modules/enemy_movement_decorator.cpp
-				${SOURCE_FILES_PATH}/modules/units.cpp
-				${SOURCE_FILES_PATH}/modules/enemy_unit_decorator.cpp
-				${SOURCE_FILES_PATH}/modules/logging_module.cpp
-				${SOURCE_FILES_PATH}/modules/enemy_units_booster.cpp
-				${SOURCE_FILES_PATH}/modules/hero_unit_attack_module.cpp
+								${SOURCE_FILES_PATH}/modules/game.cpp
+								${SOURCE_FILES_PATH}/modules/geometry.cpp
+								${SOURCE_FILES_PATH}/modules/enemy_units.cpp
+								${SOURCE_FILES_PATH}/modules/hero_unit.cpp
+								${SOURCE_FILES_PATH}/modules/window.cpp
+								${SOURCE_FILES_PATH}/modules/units_factories.cpp
+								${SOURCE_FILES_PATH}/modules/controller.cpp
+								${SOURCE_FILES_PATH}/modules/bullet.cpp
+								${SOURCE_FILES_PATH}/modules/game_proxy.cpp
+								${SOURCE_FILES_PATH}/modules/enemy_super_attack_decorator.cpp
+								${SOURCE_FILES_PATH}/modules/enemy_movement_decorator.cpp
+								${SOURCE_FILES_PATH}/modules/units.cpp
+								${SOURCE_FILES_PATH}/modules/enemy_unit_decorator.cpp
+								${SOURCE_FILES_PATH}/modules/logging_module.cpp
+								${SOURCE_FILES_PATH}/modules/enemy_units_booster.cpp
+								${SOURCE_FILES_PATH}/modules/hero_unit_attack_module.cpp
+								${SOURCE_FILES_PATH}/modules/text_helper.cpp
 
-				${TESTS_FILES_PATH}/tests/geometric_module_tests.cpp
-				${TESTS_FILES_PATH}/tests/bullets_module_tests.cpp
-				${TESTS_FILES_PATH}/tests/game_proxy_tests.cpp
-				${TESTS_FILES_PATH}/tests/enemy_units_booster_tests.cpp
-				${TESTS_FILES_PATH}/tests/units_factories_tests.cpp
-				${TESTS_FILES_PATH}/tests/hero_unit_attack_module_tests.cpp
-				${TESTS_FILES_PATH}/tests/enemy_units_tests.cpp
+								${TESTS_FILES_PATH}/tests/geometric_module_tests.cpp
+								${TESTS_FILES_PATH}/tests/bullets_module_tests.cpp
+								${TESTS_FILES_PATH}/tests/game_proxy_tests.cpp
+								${TESTS_FILES_PATH}/tests/enemy_units_booster_tests.cpp
+								${TESTS_FILES_PATH}/tests/units_factories_tests.cpp
+								${TESTS_FILES_PATH}/tests/hero_unit_attack_module_tests.cpp
+								${TESTS_FILES_PATH}/tests/enemy_units_tests.cpp
+								${TESTS_FILES_PATH}/tests/hero_unit_tests.cpp
+								${TESTS_FILES_PATH}/tests/enemy_units_decorators_tests.cpp
+								${TESTS_FILES_PATH}/tests/text_helper_tests.cpp
 
-				${TESTS_FILES_PATH}/modules/testing_module.cpp
-				${TESTS_FILES_PATH}/modules/fake_controller.cpp)
+								${TESTS_FILES_PATH}/modules/testing_module.cpp
+								${TESTS_FILES_PATH}/modules/fake_controller.cpp)
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 if(NOT Boost_FOUND)

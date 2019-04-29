@@ -98,7 +98,7 @@ private:
 	std::shared_ptr<Controller> controller;
 	std::vector<std::shared_ptr<HeroUnitAttackModule>> attack_modules;
 	std::shared_ptr<HeroUnitAttackModule> attack_module;
-	int current_attack_module_index;
+	int current_attack_module_number;
 
 protected:
 	void addBullet(Vector direction);

@@ -25,7 +25,8 @@ add_executable(${PROJECT_NAME}  ${SOURCE_FILES_PATH}/main.cpp
 				${SOURCE_FILES_PATH}/modules/enemy_unit_decorator.cpp
 				${SOURCE_FILES_PATH}/modules/logging_module.cpp
 				${SOURCE_FILES_PATH}/modules/enemy_units_booster.cpp
-				${SOURCE_FILES_PATH}/modules/hero_unit_attack_module.cpp)
+				${SOURCE_FILES_PATH}/modules/hero_unit_attack_module.cpp
+				${SOURCE_FILES_PATH}/modules/text_helper.cpp)
 
 target_link_libraries(${PROJECT_NAME} sfml-graphics)
 target_link_libraries(${PROJECT_NAME} sfml-window)

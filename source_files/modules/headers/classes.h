@@ -26,6 +26,7 @@ class SingleShotModule;
 class SplitShotModule;
 class TripleShotModule;
 
+class TextHelper;
 class LoggingModule;
 
 class TestingModule;

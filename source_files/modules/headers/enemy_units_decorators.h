@@ -31,6 +31,10 @@ public:
 };
 
 class EnemyMovementDecorator : public EnemyUnitDecorator{
+#ifdef TESTING_MODE
+	friend TestingModule;
+#endif
+
 private:
     std::pair<int, int> new_grid_position;
     Vector convertGridCellToVector(std::pair<int, int> cell_index);
