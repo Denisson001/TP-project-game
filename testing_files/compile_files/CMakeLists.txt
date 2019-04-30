@@ -42,6 +42,8 @@ add_executable(${PROJECT_NAME}  ${TESTS_FILES_PATH}/tests/main.cpp
 								${TESTS_FILES_PATH}/tests/hero_unit_tests.cpp
 								${TESTS_FILES_PATH}/tests/enemy_units_decorators_tests.cpp
 								${TESTS_FILES_PATH}/tests/text_helper_tests.cpp
+								${TESTS_FILES_PATH}/tests/units_tests.cpp
+								${TESTS_FILES_PATH}/tests/logging_module_tests.cpp
 
 								${TESTS_FILES_PATH}/modules/testing_module.cpp
 								${TESTS_FILES_PATH}/modules/fake_controller.cpp)

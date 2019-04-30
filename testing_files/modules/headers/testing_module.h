@@ -8,6 +8,7 @@
 #include <enemy_units_booster.h>
 #include <hero_unit_attack_module.h>
 #include <enemy_units_decorators.h>
+#include <logging_module.h>
 
 class TestingModule{
 public:
@@ -29,4 +30,8 @@ public:
 	static Vector convertGridCellToVector(std::shared_ptr<EnemyMovementDecorator> decorated_enemy_unit, std::pair<int, int> cell_index);
 	static void setNewGridPosition(std::shared_ptr<EnemyMovementDecorator> decorated_enemy_unit);
 	static std::pair<int, int> getNewGridPosition(std::shared_ptr<EnemyMovementDecorator> decorated_enemy_unit);
+    static void printMessages();
+    static void addMessage(const std::string& str);
+    static void addEnemyUnitSettings(std::shared_ptr<EnemyUnit> enemy_unit);
+    static void addHeroUnitSettings(std::shared_ptr<HeroUnit> hero_unit);
 };

@@ -13,8 +13,7 @@ void LoggingModule::printMessages(){
     if (text.size() == 0){
         return;
     }
-    std::ofstream file;
-    file.open(LOG_FILE_PATH, std::fstream::app);
+    std::fstream file(LOG_FILE_PATH, std::fstream::app);
     std::string time = TextHelper::convertTimeToString(GameProxy::getTime() / 1000) + " ";
     file << time << text[0] << "\n";
     for (int i = 1; i < (int)text.size(); i++){
@@ -33,8 +32,7 @@ void LoggingModule::addMessage(const std::string& str){
 }
 
 void LoggingModule::initialize(int seed){
-    std::ofstream file;
-    file.open(LOG_FILE_PATH, std::fstream::out);
+    std::fstream file(LOG_FILE_PATH, std::fstream::out);
     file << "*** START LOGGING ***\n";
     file << "seed: " << seed << "\n\n";
     file.close();
@@ -44,6 +42,7 @@ void LoggingModule::addHeroUnitSettings(std::shared_ptr<HeroUnit> hero_unit){
     addMessage("Damage: " + TextHelper::convertIntToString(hero_unit->getDamage()));
     addMessage("Health: " + TextHelper::convertIntToString(hero_unit->getHealth()));
     addMessage("Attack range: " + TextHelper::convertIntToString(hero_unit->getAttackRange()));
+    addMessage("Attack cooldown: " + TextHelper::convertIntToString(hero_unit->getMaxAttackCooldown()));
 }
 
 void LoggingModule::addEnemyUnitSettings(std::shared_ptr<EnemyUnit> enemy_unit){
@@ -150,11 +149,11 @@ void LoggingModule::killed(std::shared_ptr<MightyEnemyUnit> enemy_unit){
 }
 
 void LoggingModule::killed(std::shared_ptr<EnemySuperAttackDecorator> decorator){
-    addMessage("Decorated EnemyUnit with super attack was killed at position: " + TextHelper::convertVectorToString(decorator->getPosition()));
+    addMessage("Decorated enemy unit with super attack was killed at position: " + TextHelper::convertVectorToString(decorator->getPosition()));
     printMessages();
 }
 
 void LoggingModule::killed(std::shared_ptr<EnemyMovementDecorator> decorator){
-    addMessage("Decorated EnemyUnit with movement was killed at position: " + TextHelper::convertVectorToString(decorator->getPosition()));
+    addMessage("Decorated enemy unit with movement was killed at position: " + TextHelper::convertVectorToString(decorator->getPosition()));
     printMessages();
 }

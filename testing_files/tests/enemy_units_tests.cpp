@@ -46,6 +46,17 @@ BOOST_AUTO_TEST_CASE(updateGridPosition_getCurrentGridPosition_methods){
     }
 }
 
+BOOST_AUTO_TEST_CASE(getCurrentAttackCooldown_method){
+    std::shared_ptr<Game> game = initializeGame();
+    std::shared_ptr<EnemyUnit> enemy_unit = SquareUnitsFactory::getInstance().createMightyEnemyUnit(Vector(0, 0));
+    double time = 100;
+    enemy_unit->getCurrentAttackCooldown() = time;
+    enemy_unit->update(time / 2);
+    BOOST_CHECK((int)TestingModule::getEnemyUnitsBullets(game).size() == 0);
+    enemy_unit->update(time / 2 + eps9);
+    BOOST_CHECK((int)TestingModule::getEnemyUnitsBullets(game).size() > 0);
+}
+
 void checkBulletsSettings(std::shared_ptr<EnemyUnit> enemy_unit, int bullets_amount){
     std::shared_ptr<Game> game = initializeGame();
     TestingModule::updateAttackModule(enemy_unit, enemy_unit->getMaxAttackCooldown() + eps9);

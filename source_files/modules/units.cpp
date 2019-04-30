@@ -40,7 +40,3 @@ int& Unit::getHealth(){
 double& Unit::getMaxAttackCooldown(){
     return max_attack_cooldown;
 }
-
-double& EnemyUnit::getCurrentAttackCooldown(){
-    return current_attack_cooldown;
-}

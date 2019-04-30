@@ -76,6 +76,10 @@ std::pair<int, int>& EnemyUnit::getCurrentGridPosition(){
     return current_grid_position;
 }
 
+double& EnemyUnit::getCurrentAttackCooldown(){
+    return current_attack_cooldown;
+}
+
 EnemyUnit::~EnemyUnit(){
     GameProxy::setGridCellValue(getCurrentGridPosition(), 0);
 }

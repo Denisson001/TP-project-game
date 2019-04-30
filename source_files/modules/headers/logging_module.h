@@ -8,6 +8,10 @@
 #include <classes.h>
 
 class LoggingModule{
+#ifdef TESTING_MODE
+	friend TestingModule;
+#endif
+
 private:
     static std::vector<std::string> text;
     static void printMessages();

@@ -71,3 +71,19 @@ void TestingModule::setNewGridPosition(std::shared_ptr<EnemyMovementDecorator> d
 std::pair<int, int> TestingModule::getNewGridPosition(std::shared_ptr<EnemyMovementDecorator> decorated_enemy_unit){
 	return decorated_enemy_unit->new_grid_position;
 }
+
+void TestingModule::printMessages(){
+	LoggingModule::printMessages();
+}
+
+void TestingModule::addMessage(const std::string& str){
+	LoggingModule::addMessage(str);
+}
+
+void TestingModule::addEnemyUnitSettings(std::shared_ptr<EnemyUnit> enemy_unit){
+	LoggingModule::addEnemyUnitSettings(enemy_unit);
+}
+
+void TestingModule::addHeroUnitSettings(std::shared_ptr<HeroUnit> hero_unit){
+	LoggingModule::addHeroUnitSettings(hero_unit);
+}
