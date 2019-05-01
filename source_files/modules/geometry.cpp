@@ -12,6 +12,10 @@ Vector Vector::operator*(double value){
     return Vector(x * value, y * value);
 }
 
+Vector Vector::operator/(double value){
+    return Vector(x / value, y / value);
+}
+
 Vector Vector::operator-(const Vector& next){
     return Vector(x - next.x, y - next.y);
 }

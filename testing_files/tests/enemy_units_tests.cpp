@@ -11,7 +11,7 @@ BOOST_AUTO_TEST_SUITE(ENEMY_UNIT)
 
 std::shared_ptr<Game> initializeGame(){
     GameProxy::initialize(CircleUnitsFactory::getInstance(), SquareUnitsFactory::getInstance(), std::make_shared<FakeController>("00000000"));
-    return GameProxy::getGameInstance();
+    return TestingModule::getGameInstance();
 }
 
 BOOST_AUTO_TEST_CASE(addBullet_method){
@@ -34,8 +34,8 @@ BOOST_AUTO_TEST_CASE(addBullet_method){
 BOOST_AUTO_TEST_CASE(updateGridPosition_getCurrentGridPosition_methods){
     initializeGame();
     std::shared_ptr<EnemyUnit> enemy_unit = SquareUnitsFactory::getInstance().createStrongEnemyUnit(Vector(0, 0));
-    for (int i = 1; i < HORIZONTAL_DOTS_AMOUNT; i++){
-        for (int j = 1; j < VERTICAL_DOTS_AMOUNT; j++){
+    for (int i = 1; i <= HORIZONTAL_DOTS_AMOUNT; i++){
+        for (int j = 1; j <= VERTICAL_DOTS_AMOUNT; j++){
             Vector position = Vector(i * HORIZONTAL_GAP_SIZE, j * VERITCAL_GAP_SIZE);
             enemy_unit->getPosition() = position;
             enemy_unit->updateGridPosition();

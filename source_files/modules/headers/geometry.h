@@ -6,6 +6,7 @@ public:
 	Vector();
 	Vector(double x, double y);
 	Vector operator*(double value);
+	Vector operator/(double value);
 	Vector operator-(const Vector& next);
 	Vector operator+(const Vector& next);
 	Vector& operator-=(const Vector& next);

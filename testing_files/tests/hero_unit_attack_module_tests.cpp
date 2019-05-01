@@ -12,7 +12,7 @@ BOOST_AUTO_TEST_SUITE(HERO_UNIT_ATTACK_MODULE)
 
 std::shared_ptr<Game> initializeGame(std::string controller_string){
     GameProxy::initialize(CircleUnitsFactory::getInstance(), SquareUnitsFactory::getInstance(), std::make_shared<FakeController>(controller_string));
-    return GameProxy::getGameInstance();
+    return TestingModule::getGameInstance();
 }
 
 BOOST_AUTO_TEST_CASE(getDirectionFromController_method){

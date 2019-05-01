@@ -16,5 +16,5 @@ private:
 public:
 	Window();
 	bool isClosed();
-	void display(std::shared_ptr<Game> game);
+	void display();
 };

@@ -39,6 +39,7 @@ add_executable(${PROJECT_NAME}  ${TESTS_FILES_PATH}/tests/main.cpp
 								${TESTS_FILES_PATH}/tests/units_factories_tests.cpp
 								${TESTS_FILES_PATH}/tests/hero_unit_attack_module_tests.cpp
 								${TESTS_FILES_PATH}/tests/enemy_units_tests.cpp
+								${TESTS_FILES_PATH}/tests/game_module_tests.cpp
 								${TESTS_FILES_PATH}/tests/hero_unit_tests.cpp
 								${TESTS_FILES_PATH}/tests/enemy_units_decorators_tests.cpp
 								${TESTS_FILES_PATH}/tests/text_helper_tests.cpp

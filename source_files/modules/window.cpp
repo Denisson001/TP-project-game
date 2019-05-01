@@ -1,5 +1,6 @@
 #include <window.h>
 
+#include <game_proxy.h>
 #include <text_helper.h>
 
 #include <technical_settings.h>
@@ -29,7 +30,8 @@ void Window::displayText(std::string text, Vector position){
     window.draw(sfml_text);
 }
 
-void Window::display(std::shared_ptr<Game> game){
+void Window::display(){
+    std::shared_ptr<Game> game = GameProxy::getGameInstance();
     window.clear();
 
     for (auto& unit : game->enemy_units){

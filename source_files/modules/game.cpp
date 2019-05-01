@@ -7,18 +7,19 @@
 #include <units_settings.h>
 #include <technical_settings.h>
 
-Game::Game(UnitsFactory& enemy_units_factory): enemy_units_factory(enemy_units_factory){
-    for (int i = 1; i < HORIZONTAL_DOTS_AMOUNT; i++){
-        for (int j = 1; j < VERTICAL_DOTS_AMOUNT; j++){
+Game::Game(UnitsFactory& enemy_units_factory): enemy_units_factory(enemy_units_factory){}
+
+void Game::initialize(UnitsFactory& hero_unit_factory, std::shared_ptr<Controller> controller){
+    for (int i = 1; i <= HORIZONTAL_DOTS_AMOUNT; i++){
+        for (int j = 1; j <= VERTICAL_DOTS_AMOUNT; j++){
             grid[i][j] = 0;
         }
     }
+
     timer = 0;
     enemy_units_spawn_timer = 0;
     killed_enemy_units_amount = 0;
-}
 
-void Game::initialize(UnitsFactory& hero_unit_factory, std::shared_ptr<Controller> controller){
     hero_unit = hero_unit_factory.createHeroUnit(Vector(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2), controller);
     if (MAKE_LOGS){
         LoggingModule::created(hero_unit);
@@ -32,7 +33,7 @@ void Game::eraseFromVector(std::vector<T>& vector, int& index){
     index--;
 }
 
-void Game::checkHeroUnitBullets(double time){
+void Game::updateHeroUnitBullets(double time){
     for (int i = 0; i < (int)hero_unit_bullets.size(); i++){
         hero_unit_bullets[i]->update(time);
 
@@ -78,7 +79,7 @@ void Game::checkHeroUnitBullets(double time){
     }
 }
 
-void Game::checkEnemyUnitsBullets(double time){
+void Game::updateEnemyUnitsBullets(double time){
     sf::FloatRect hero_unit_bounds = hero_unit->getBounds();
 
     for (int i = 0; i < (int)enemy_units_bullets.size(); i++){
@@ -106,14 +107,15 @@ std::pair<int, int> Game::getRandomFreeGridCell(){
     sf::FloatRect enemy_unit_bounds;
     enemy_unit_bounds.height = enemy_unit_bounds.width = ENEMY_SHAPE_MAX_SIZE;
 
-    for (int i = 1; i < HORIZONTAL_DOTS_AMOUNT; i++){
-        for (int j = 1; j < VERTICAL_DOTS_AMOUNT; j++){
+    for (int i = 1; i <= HORIZONTAL_DOTS_AMOUNT; i++){
+        for (int j = 1; j <= VERTICAL_DOTS_AMOUNT; j++){
             if (grid[i][j] == 0){
                 Vector position = Vector(i * HORIZONTAL_GAP_SIZE, j * VERITCAL_GAP_SIZE);
                 enemy_unit_bounds.left = position.x - enemy_unit_bounds.width / 2;
                 enemy_unit_bounds.top = position.y - enemy_unit_bounds.height / 2;
-                if (GameProxy::checkEnemyUnitPosition(enemy_unit_bounds))
+                if (GameProxy::checkEnemyUnitPosition(enemy_unit_bounds)){
                     positions.push_back((std::make_pair(i, j)));
+                }
             }
         }
     }
@@ -125,8 +127,8 @@ std::pair<int, int> Game::getRandomFreeGridCell(){
 }
 
 void Game::spawnEnemyUnits(){
-    if ((int)enemy_units.size() < MIN_ENEMY_UNITS_AMOUNT && enemy_units_spawn_timer >= ENEMY_UNITS_SMALL_SPAWN_GAP ||
-        (int)enemy_units.size() < MAX_ENEMY_UNITS_AMOUNT && enemy_units_spawn_timer >= ENEMY_UNITS_BIG_SPAWN_GAP){
+    if (((int)enemy_units.size() < MIN_ENEMY_UNITS_AMOUNT && enemy_units_spawn_timer >= ENEMY_UNITS_SMALL_SPAWN_GAP) ||
+        ((int)enemy_units.size() < MAX_ENEMY_UNITS_AMOUNT && enemy_units_spawn_timer >= ENEMY_UNITS_BIG_SPAWN_GAP)){
 
         std::pair<int, int> grid_position = getRandomFreeGridCell();
         if (grid_position != std::make_pair(-1, -1)){
@@ -178,8 +180,8 @@ void Game::update(double time){
         enemy_unit->update(time);
     }
 
-    checkHeroUnitBullets(time);
-    checkEnemyUnitsBullets(time);
+    updateHeroUnitBullets(time);
+    updateEnemyUnitsBullets(time);
 
     spawnEnemyUnits();
 }

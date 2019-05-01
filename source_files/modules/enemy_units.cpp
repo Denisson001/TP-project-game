@@ -61,8 +61,8 @@ void EnemyUnit::addBullet(Vector direction){
 void EnemyUnit::updateGridPosition(){
     double best_value = 1e9;
     getCurrentGridPosition() = std::make_pair(1, 1);
-    for (int i = 1; i < HORIZONTAL_DOTS_AMOUNT; i++){
-        for (int j = 1; j < VERTICAL_DOTS_AMOUNT; j++){
+    for (int i = 1; i <= HORIZONTAL_DOTS_AMOUNT; i++){
+        for (int j = 1; j <= VERTICAL_DOTS_AMOUNT; j++){
             Vector current_position(i * HORIZONTAL_GAP_SIZE, j * VERITCAL_GAP_SIZE);
             if ((getPosition() - current_position).length() < best_value){
                 best_value = (getPosition() - current_position).length();

@@ -20,6 +20,13 @@ BOOST_AUTO_TEST_CASE(multiplication_on_double_operator){
     BOOST_CHECK_CLOSE_FRACTION(vector.y, -3.1, eps9);
 }
 
+BOOST_AUTO_TEST_CASE(division_on_double_operator){
+    Vector vector(7, -7);
+    vector = vector / 2.3;
+    BOOST_CHECK_CLOSE_FRACTION(vector.x, 7 / 2.3, eps9);
+    BOOST_CHECK_CLOSE_FRACTION(vector.y, -7 / 2.3, eps9);
+}
+
 BOOST_AUTO_TEST_CASE(subtraction_operator){
     Vector vector(1, -2);
     vector = vector - Vector(2.5, -2);

@@ -11,7 +11,7 @@ BOOST_AUTO_TEST_SUITE(GAME_PROXY)
 
 std::shared_ptr<Game> initializeGame(){
 	GameProxy::initialize(CircleUnitsFactory::getInstance(), SquareUnitsFactory::getInstance(), std::make_shared<FakeController>("00000000"));
-	return GameProxy::getGameInstance();
+	return TestingModule::getGameInstance();
 }
 
 BOOST_AUTO_TEST_CASE(getGameInstance_method){

@@ -19,7 +19,7 @@ void EnemyMovementDecorator::setNewGridPosition(){
     for (int i = 0; i < 4; i++){
         int new_x = getCurrentGridPosition().first + dx[i];
         int new_y = getCurrentGridPosition().second + dy[i];
-        if (new_x >= 1 && new_x < HORIZONTAL_DOTS_AMOUNT && new_y >= 1 && new_y < VERTICAL_DOTS_AMOUNT){
+        if (new_x >= 1 && new_x <= HORIZONTAL_DOTS_AMOUNT && new_y >= 1 && new_y <= VERTICAL_DOTS_AMOUNT){
             if (GameProxy::getGridCellValue(std::make_pair(new_x, new_y)))
                 continue;
             directions.push_back(std::make_pair(new_x, new_y));

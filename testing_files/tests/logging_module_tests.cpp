@@ -17,7 +17,7 @@ BOOST_AUTO_TEST_SUITE(LOGGING_MODULE)
 
 std::shared_ptr<Game> initializeGame(){
     GameProxy::initialize(CircleUnitsFactory::getInstance(), SquareUnitsFactory::getInstance(), std::make_shared<FakeController>("00000000"));
-    return GameProxy::getGameInstance();
+    return TestingModule::getGameInstance();
 }
 
 void readWords(std::fstream& file, int words_amount){

@@ -6,8 +6,15 @@
 #include <game.h>
 
 class GameProxy{
+#ifdef TESTING_MODE
+	friend TestingModule;
+#endif
+
+    friend Window;
+
 private:
     static std::shared_ptr<Game> game;
+    static std::shared_ptr<Game> getGameInstance();
 
 public:
     GameProxy() = delete;
@@ -22,6 +29,5 @@ public:
     static void initialize(UnitsFactory& hero_unit_factory, UnitsFactory& enemy_units_factory, std::shared_ptr<Controller> controller);
     static void update(double time);
     static bool end();
-    static std::shared_ptr<Game> getGameInstance();
     static int getKilledEnemyUnitsAmount();
 };

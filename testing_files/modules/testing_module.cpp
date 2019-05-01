@@ -1,5 +1,9 @@
 #include <testing_module.h>
 
+std::shared_ptr<Game> TestingModule::getGameInstance(){
+	return GameProxy::getGameInstance();
+}
+
 std::shared_ptr<HeroUnit> TestingModule::getHeroUnit(std::shared_ptr<Game> game){
 	return game->hero_unit;
 }
@@ -86,4 +90,20 @@ void TestingModule::addEnemyUnitSettings(std::shared_ptr<EnemyUnit> enemy_unit){
 
 void TestingModule::addHeroUnitSettings(std::shared_ptr<HeroUnit> hero_unit){
 	LoggingModule::addHeroUnitSettings(hero_unit);
+}
+
+std::pair<int, int> TestingModule::getRandomFreeGridCell(std::shared_ptr<Game> game){
+	return game->getRandomFreeGridCell();
+}
+
+void TestingModule::updateEnemyUnitsBullets(std::shared_ptr<Game> game, double time){
+	game->updateEnemyUnitsBullets(time);
+}
+
+void TestingModule::updateHeroUnitBullets(std::shared_ptr<Game> game, double time){
+	game->updateHeroUnitBullets(time);
+}
+
+void TestingModule::eraseFromVector(std::shared_ptr<Game> game, std::vector<std::shared_ptr<EnemyUnit>>& vector, int& index){
+	game->eraseFromVector(vector, index);
 }

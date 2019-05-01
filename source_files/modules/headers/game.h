@@ -21,11 +21,11 @@ private:
 	std::vector<std::shared_ptr<EnemyUnit>> enemy_units;
 	std::shared_ptr<HeroUnit> hero_unit;
 	std::vector<std::shared_ptr<Bullet>> enemy_units_bullets, hero_unit_bullets;
-	void checkHeroUnitBullets(double time);
-	void checkEnemyUnitsBullets(double time);
+	void updateHeroUnitBullets(double time);
+	void updateEnemyUnitsBullets(double time);
 	std::pair<int, int> getRandomFreeGridCell();
 	void spawnEnemyUnits();
-	bool grid[HORIZONTAL_DOTS_AMOUNT][VERTICAL_DOTS_AMOUNT];
+	bool grid[HORIZONTAL_DOTS_AMOUNT + 1][VERTICAL_DOTS_AMOUNT + 1];
 	double enemy_units_spawn_timer;
 	template<class T>
 	void eraseFromVector(std::vector<T>& vector, int& index);

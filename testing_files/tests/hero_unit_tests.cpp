@@ -13,13 +13,13 @@ BOOST_AUTO_TEST_SUITE(HERO_UNIT)
 
 std::shared_ptr<Game> initializeGame(std::string controller_string){
 	GameProxy::initialize(CircleUnitsFactory::getInstance(), SquareUnitsFactory::getInstance(), std::make_shared<FakeController>(controller_string));
-	return GameProxy::getGameInstance();
+	return TestingModule::getGameInstance();
 }
 
 BOOST_AUTO_TEST_CASE(getController_method){
 	std::shared_ptr<FakeController> controller = std::make_shared<FakeController>("00000000");
 	GameProxy::initialize(CircleUnitsFactory::getInstance(), SquareUnitsFactory::getInstance(), controller);
-	BOOST_CHECK(TestingModule::getHeroUnit(GameProxy::getGameInstance())->getController() == controller);
+	BOOST_CHECK(TestingModule::getHeroUnit(TestingModule::getGameInstance())->getController() == controller);
 }
 
 BOOST_AUTO_TEST_CASE(addBullet_method){
