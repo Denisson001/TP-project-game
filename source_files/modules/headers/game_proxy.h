@@ -7,7 +7,7 @@
 
 class GameProxy{
 #ifdef TESTING_MODE
-	friend TestingModule;
+    friend TestingModule;
 #endif
 
     friend Window;

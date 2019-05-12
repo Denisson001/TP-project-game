@@ -9,12 +9,12 @@
 
 class Window{
 private:
-	sf::RenderWindow window;
-	sf::Font font;
-	void displayText(std::string text, Vector position);
+    sf::RenderWindow window;
+    sf::Font font;
+    void displayText(std::string text, Vector position);
 
 public:
-	Window();
-	bool isClosed();
-	void display();
+    Window();
+    bool isClosed();
+    void display();
 };

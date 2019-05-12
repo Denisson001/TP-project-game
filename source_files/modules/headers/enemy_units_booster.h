@@ -7,7 +7,7 @@
 
 class EnemyUnitsBooster{
 #ifdef TESTING_MODE
-	friend TestingModule;
+    friend TestingModule;
 #endif
 
 private:

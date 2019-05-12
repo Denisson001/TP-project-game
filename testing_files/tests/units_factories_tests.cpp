@@ -15,7 +15,7 @@ BOOST_AUTO_TEST_SUITE(UNITS_FACTORY)
 
 template<class UnitType, class ShapeType>
 void checkUnit(std::shared_ptr<Unit> unit, Vector position, double attack_cooldown,
-                double attack_range, int damage, int health, sf::Color color, double shape_size){
+               double attack_range, int damage, int health, sf::Color color, double shape_size){
     BOOST_CHECK_CLOSE_FRACTION(unit->getPosition().x, unit->getPosition().x, eps9);
     BOOST_CHECK_CLOSE_FRACTION(unit->getPosition().y, unit->getPosition().y, eps9);
     BOOST_CHECK_CLOSE_FRACTION(unit->getMaxAttackCooldown(), attack_cooldown, eps9);

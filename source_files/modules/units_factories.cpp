@@ -13,7 +13,7 @@ void UnitsFactory::setEnemyUnitSettings(std::shared_ptr<EnemyUnit> enemy_unit, V
 }
 
 void UnitsFactory::setHeroUnitSettings(std::shared_ptr<HeroUnit> hero_unit, Vector position, double attack_cooldown,
-                                        double attack_range, int damage, int health, std::shared_ptr<Controller> controller){
+                                       double attack_range, int damage, int health, std::shared_ptr<Controller> controller){
     hero_unit->getPosition() = position;
     hero_unit->getMaxAttackCooldown() = attack_cooldown;
     hero_unit->getAttackRange() = attack_range;

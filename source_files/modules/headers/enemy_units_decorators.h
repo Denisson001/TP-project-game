@@ -9,22 +9,23 @@
 class EnemyUnitDecorator : public EnemyUnit{
 protected:
     std::shared_ptr<EnemyUnit> decorator_ptr;
+    
 public:
     Vector& getPosition();
-	std::shared_ptr<sf::Shape>& getShape();
-	double& getMaxAttackCooldown();
-	double& getCurrentAttackCooldown();
-	double& getAttackRange();
-	int& getDamage();
-	int& getHealth();
+    std::shared_ptr<sf::Shape>& getShape();
+    double& getMaxAttackCooldown();
+    double& getCurrentAttackCooldown();
+    double& getAttackRange();
+    int& getDamage();
+    int& getHealth();
     std::pair<int, int>& getCurrentGridPosition();
     void upgrade();
 };
 
 class EnemySuperAttackDecorator : public EnemyUnitDecorator{
 protected:
-	void updateAttackModule(double time);
-	void updateMovementModule(double time);
+    void updateAttackModule(double time);
+    void updateMovementModule(double time);
 
 public:
     EnemySuperAttackDecorator(std::shared_ptr<EnemyUnit> new_decorator_ptr);
@@ -32,7 +33,7 @@ public:
 
 class EnemyMovementDecorator : public EnemyUnitDecorator{
 #ifdef TESTING_MODE
-	friend TestingModule;
+    friend TestingModule;
 #endif
 
 private:
